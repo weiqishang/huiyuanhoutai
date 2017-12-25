@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BOSSGOO</title>
+  <link rel="stylesheet" href="layui/css/layui.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+	  <div class="layui-header">
+	    <div class="layui-logo">
+	    		<img src="images/logo_01.png" style="width: 200px;"/>
+	    </div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	   <div class="nav_name layui-layout-left">
+	   		检查工具
+	   </div>
+	    <ul class="layui-nav nav_top layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	          		我要管理
+	          		<span class="all_lang lang_en"></span>
+	          		 	<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child evlang">
+	          <dd><a href=""><span class="all_lang lang_en"></span>英语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_es"></span>西班牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ru"></span>俄语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_fr"></span>法语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_de"></span>德语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_jp"></span>日语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_kr"></span>韩语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_it"></span>意大利语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_nl"></span>荷兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_gr"></span>希腊语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_se"></span>瑞典语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pl"></span>波兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_th"></span>泰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_tr"></span>土耳其语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_hi"></span>印地语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_id"></span>印尼语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ms"></span>马来语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_vi"></span>越南语</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	        	<img src="images/user_nan.png" class="layui-nav-img">
+	          		demo
+	          		<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">修改密码</a></dd>
+	          <dd><a href="">我的反馈</a></dd>
+	          <dd><a href="">推荐有礼</a></dd>
+	          <dd><a href="">我的订单</a></dd>
+	          <dd><a href="">充值中心</a></dd>
+	          <dd><a href="">升级会员</a></dd>
+	          <dd><a href="">会员续费</a></dd>       
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href=""><img src="images/zhandian.png"/> 我的站点</a></li>
+	      <li class="layui-nav-item"><a href=""><img src="images/tuichu.png"/> 退出</a></li>
+	    </ul>
+	  </div>
+	  <!--左侧导航-->
+	  <div class="layui-side cg_nav_balck">
+	    <div class="layui-side-scroll">
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+	      	<li class="layui-nav-item"><a href=""> <img src="images/nav_icon_1.png" class="nav_icon"/>  首页</a></li>
+	        <li class="layui-nav-item layui-nav-itemed">
+	          <a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon"/>  产品管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a></dd>
+	            <!--<dd><a href="">超链接</a></dd>-->
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon"/>  询盘管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_3.png" class="nav_icon"/>  营销中心</a></li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon"/>  培训中心</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""> <img src="images/nav_icon_5.png" class="nav_icon"/>  新闻中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_6.png" class="nav_icon"/>  视频中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_7.png" class="nav_icon"/>  数据管家</a></li>
+	       	 <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon"/>  公司信息</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a></dd>
+	          </dl>
+	        </li>
+	       <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon"/>  网站设置</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a></dd>
+	          </dl>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <!--主题内容-->
+	  <div class="layui-body">
+		<div class="layui-row  min_hei inspection">
+			<div class="inspection_top">
+				<div class="layui-inline">
+					<img src="images/dajiancha_03.png"/>
+				</div>
+				<div class="layui-inline inspectiontop_tex">
+					<p>内容健康指数</p>
+					<p>检查工具</p>
+				</div>
+			</div>
+			<div class="inspection_chose min_hei">
+				<div class="inspection_chosetop">
+					<ul class="layui-clear">
+						<li class="active">产品名称</li>
+						<li>产品内链</li>
+						<li>产品关键词</li>
+						<li>分类关键词</li>
+						<li>分类T.K.D</li>
+						<li>产品图片</li>
+					</ul>
+				</div>
+				<div class="inspection_con">
+					<div class="eveinspection active">
+						<p class="evinsptit layui-clear"> <span>产品名称1次为佳，</span> 如超过1次请进行调整
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<table class="layui-table" lay-even  lay-skin="line" >
+						  <colgroup>
+						    <col>
+						    <col>
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>产品名称(<a href="">点此修改</a>)共73个  <span>产品有效数共93个</span> </th>
+						      <th>重复次数</th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+					</div>
+					<div class="eveinspection">
+						<p class="evinsptit layui-clear"> <span>内链5~8个为佳，最多8个，</span> 如少于5个请进行调整
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<table class="layui-table" lay-even  lay-skin="line" >
+						  <colgroup>
+						    <col>
+						    <col>
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>产品名称 <span>（共92个产品，有效数92个）</span> </th>
+						      <th>产品内链</th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+						<!--<div class="evinplist">
+							<ul class="layui-clear">
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+							</ul>
+						</div>-->
+						
+					</div>
+					<div class="eveinspection">
+						<p class="evinsptit layui-clear"> <span>产品名称1~3次为佳，</span> 如超过3次请进行调整
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<table class="layui-table" lay-even  lay-skin="line" >
+						  <colgroup>
+						    <col>
+						    <col>
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>产品关键词共148条关键词比例1：6 </th>
+						      <th>重复次数 <a href="">(点此修改)</a></th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+
+
+
+					</div>
+					<div class="eveinspection">
+						<p class="evinsptit layui-clear"> <span>分类关键词3-6个为佳，</span> 分类关键词围绕本分类产品，请不要添加其他分类的关键词
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<table class="layui-table" lay-even  lay-skin="line" >
+						  <colgroup>
+						    <col>
+						    <col>
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>分类关键词 （共找到21个关键词） </th>
+						      <th>出现次数</th>
+						      <th>所属分类 <a href="">(点此修改)</a></th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						      <td><a href="">Plus Size Wedding Dresses</a></td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						      <td><a href="">Plus Size Wedding Dresses</a></td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						      <td><a href="">Plus Size Wedding Dresses</a></td>
+						    </tr>
+						    <tr>
+						      <td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						      <td>1</td>
+						      <td><a href="">Plus Size Wedding Dresses</a></td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+						
+					</div>
+					<div class="eveinspection ts_tkd ">
+						<p class="evinsptit layui-clear"> <span>T.K.D分别为Title,Keyword,Description，</span> Title推荐60个字符左右，Description推荐150-200个字符
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<table class="layui-table" lay-even  lay-skin="line" >
+						  <colgroup>
+						    <col width="270">
+						    <col>
+						  </colgroup>
+						  <thead>
+						    <tr>
+						      <th>产品关键词共148条&nbsp;&nbsp;&nbsp;关键词比例1:6 </th>
+						      <th></th>
+						    </tr> 
+						  </thead>
+						  <tbody>
+						    <tr>
+						    	<td rowspan="5" class="rowtd">
+						      	   1
+						      	</td>
+						    </tr>
+						    <tr>
+						    	<td class="tdktit">
+						      		标题标题标题标题标题
+						     	</td>
+						    </tr>
+						    <tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    <tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    <tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    <tr>
+						    	<td rowspan="5" class="rowtd">
+						      	   2
+						      </td>
+						    </tr>
+						     <tr>
+						    	 <td class="tdktit">
+						      		标题标题标题标题标题
+						       </td>
+						    </tr>
+						  	<tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    <tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    <tr>
+						    	<td><a href="">Trumpet Mermaid Scoop Strapless Elastic-satin Chapel Train Manmade Flowers Beading Ruffled Wedding Dress</a></td>
+						    </tr>
+						    
+						  </tbody>
+						</table>
+						
+						
+					</div>
+					<div class="eveinspection ">
+						<p class="evinsptit layui-clear"> <span>单张产品图片不超过3次，</span> 如超过3次请进行调整
+						<button class="layui-btn layui-btn-normal">
+							更新结果
+						</button>	
+						</p>
+						<div class="evinplist" style="border-top: 1px solid #f2f2f2;">
+							<ul class="layui-clear">
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+								<li>
+									<a href="" class="evinpimgcon">
+										<img src="images/navimg_03.png"/>
+									</a>
+									<section class="layui-elip">
+										<a href="">重复一次</a>
+									</section>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	  </div>
+	  <!--底部版权-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	  	 版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+	  </div>
+	</div>
+</div>
+<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+;!function(){
+  //无需再执行layui.use()方法加载模块，直接使用即可
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //…
+}();
+$('.inspection_chosetop ul li').each(function  (i) {
+	$(this).click(function  () {
+		$(this).addClass('active').siblings().removeClass('active')
+		$('.inspection_con .eveinspection').eq(i).addClass('active').siblings().removeClass('active')
+	})
+})
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>BOSSGOO</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<!--头部-->
+			<div class="layui-header">
+				<div class="layui-logo">
+					<img src="images/logo_01.png" style="width: 200px;" />
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="nav_name layui-layout-left">
+					图片银行
+				</div>
+				<ul class="layui-nav nav_top layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							我要管理
+							<span class="all_lang lang_en"></span>
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child evlang">
+							<dd>
+								<a href=""><span class="all_lang lang_en"></span>英语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_es"></span>西班牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ru"></span>俄语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_fr"></span>法语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_de"></span>德语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_jp"></span>日语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_kr"></span>韩语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_it"></span>意大利语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_nl"></span>荷兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_gr"></span>希腊语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_se"></span>瑞典语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pl"></span>波兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_th"></span>泰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_tr"></span>土耳其语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_hi"></span>印地语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_id"></span>印尼语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ms"></span>马来语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_vi"></span>越南语</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							<img src="images/user_nan.png" class="layui-nav-img"> demo
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">修改密码</a>
+							</dd>
+							<dd>
+								<a href="">我的反馈</a>
+							</dd>
+							<dd>
+								<a href="">推荐有礼</a>
+							</dd>
+							<dd>
+								<a href="">我的订单</a>
+							</dd>
+							<dd>
+								<a href="">充值中心</a>
+							</dd>
+							<dd>
+								<a href="">升级会员</a>
+							</dd>
+							<dd>
+								<a href="">会员续费</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/zhandian.png" /> 我的站点</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/tuichu.png" /> 退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航-->
+			<div class="layui-side cg_nav_balck">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_1.png" class="nav_icon" /> 首页</a>
+						</li>
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon" /> 产品管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a>
+								</dd>
+								<!--<dd><a href="">超链接</a></dd>-->
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon" /> 询盘管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_3.png" class="nav_icon" /> 营销中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon" /> 培训中心</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_5.png" class="nav_icon" /> 新闻中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_6.png" class="nav_icon" /> 视频中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_7.png" class="nav_icon" /> 数据管家</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon" />公司信息</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon" /> 网站设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主题内容-->
+			<div class="layui-body">
+				<div class="bankmain box-shaodw layui-row min_hei">
+					<div class="bank-sidebar">
+						<p class="bank-cate-title">图片分类    <i class="layui-icon">&#xe608;</i> </p>
+						<ul class="bank-cate-list" id="groups">
+							<li sort="97" gid="10460" title="96">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="96">96</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(10460,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(10460,this)"></span>
+									<span class="down" onclick="downG(10460,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(10460,this)"></span>
+								</div>
+							</li>
+							<li sort="96" gid="10780" title="test">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="test">test</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(10780,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(10780,this)"></span>
+									<span class="down" onclick="downG(10780,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(10780,this)"></span>
+								</div>
+								<ul class="bank-cate-list-sub">
+									<li title="test2" gid="10781" class="">
+										<a href="javascript:void(0);" title="test2">test2</a>
+										<div class="bank-cate-list-sub-btn">
+											<span class="delete" onclick="deleteG(10781,this)"></span>
+										</div>
+									</li>
+									<li title="test23" gid="10781" class="">
+										<a href="javascript:void(0);" title="test3">test3</a>
+										<div class="bank-cate-list-sub-btn">
+											<span class="delete" onclick="deleteG(10781,this)"></span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li sort="95" gid="10459" title="97">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="97">97</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(10459,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(10459,this)"></span>
+									<span class="down" onclick="downG(10459,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(10459,this)"></span>
+								</div>
+							</li>
+							<li sort="94" gid="10458" title="98">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="98">98</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(10458,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(10458,this)"></span>
+									<span class="down" onclick="downG(10458,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(10458,this)"></span>
+								</div>
+							</li>
+							<li sort="93" gid="10457" title="99">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="99">99</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(10457,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(10457,this)"></span>
+									<span class="down" onclick="downG(10457,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(10457,this)"></span>
+								</div>
+							</li>
+							<li sort="92" gid="9795" title="1321">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="1321">1321</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(9795,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(9795,this)"></span>
+									<span class="down" onclick="downG(9795,this)"></span>
+									<span class="name" onclick=""></span>
+									<span class="delete" onclick="deleteG(9795,this)"></span>
+								</div>
+							</li>
+							<li sort="90" gid="8604" title="LED screen" class="">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="LED screen">LED screen</a>
+								</div>
+								<div class="bank-cate-list-btn" style="display: none;">
+									<span class="add" onclick="addChildG(8604,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(8604,this)"></span>
+									<span class="down" onclick="downG(8604,this)"></span>
+									<span class="delete" onclick="deleteG(8604,this)"></span>
+								</div>
+							</li>
+							<li sort="89" gid="8597" title="11" class="">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="11">11</a>
+								</div>
+								<div class="bank-cate-list-btn" style="display: none;">
+									<span class="add" onclick="addChildG(8597,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(8597,this)"></span>
+									<span class="down" onclick="downG(8597,this)"></span>
+									<span class="delete" onclick="deleteG(8597,this)"></span>
+								</div>
+							</li>
+							<li sort="88" gid="8596" title="12">
+								<div class="bank-cate-list-name">
+									<a href="javascript:void(0);" title="12">12</a>
+								</div>
+								<div class="bank-cate-list-btn">
+									<span class="add" onclick="addChildG(8596,this)" data-toggle="modal" data-target="#newCateChild"></span>
+									<span class="up" onclick="upG(8596,this)"></span>
+									<span class="down" onclick="downG(8596,this)"></span>
+									<span class="delete" onclick="deleteG(8596,this)"></span>
+								</div>
+							</li>
+
+					</div>
+					<div class="bank-r">
+						<div class="bank-r-top layui-row">
+							<input type="text" class="layui-input" placeholder="图片名称">
+							<input type="text" class="layui-input" id="test1" placeholder="选择日期区间">
+							<button class="layui-btn layui-btn-normal">
+								搜索
+							</button>
+						</div>
+						<div class="bank-r-mid layui-clear">
+							<div class="bank-r-midl">
+								<span>
+									<i class="layui-icon"></i>
+								上传图片
+								</span>
+							</div>
+							<div class="bank-r-midr">
+								<form action="" class="layui-form">
+									<input type="checkbox" name="" title="全选" lay-skin="primary">
+									<a href="" class="lk_abtn">删除</a>
+									<a href="" class="lk_abtn">移动至其他分类</a>
+								</form>
+							</div>
+
+						</div>
+						<div class="bank-r-bto">
+							<ul class="layui-clear" >
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+								<li>
+									<span>
+											<img src="images/navimg_03.png" alt="" />
+										</span>
+									<label class="check">
+                                       	 <span>
+                                       	 	<i class="layui-icon">&#xe605;</i>
+                                       	 </span>
+                                   	 </label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部版权-->
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+			</div>
+		</div>
+		</div>
+
+		<div class="col-1 ">
+			<div class="content" style="position:relative; overflow:hidden">
+
+				<form enctype="multipart/form-data" id="picture-bank-form" action="/member/attach/pictureBankCreate.html" method="post">
+					<div class="pro_box">
+						<div class="explain-col f12 margin15">
+							<span style="color:red">*</span>星号为必填项 </div>
+						<table width="100%" cellpadding="0" cellspacing="0" class="f12">
+							<tbody>
+								<tr id="cat">
+									<td colspan="2" class="pro_title"><strong>上传图片</strong> </td>
+								</tr>
+
+								<tr>
+									<td width="15%">
+										<label for="PictureBank_image_name">图片</label><span style="color:red">*</span>
+									</td>
+									<td width="85%">
+										<label>
+                            <span class="add-input-box">
+                                <a class="add-input" href="javascript:void(0)"><div class="qq-uploader"><div class="qq-upload-drop-area" style="display: none;"><span></span></div><div class="qq-upload-button" style="position: relative; overflow: hidden; direction: ltr;">选择本地图片<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></div><ul class="qq-upload-list"></ul></div></a></span>
+                        </label>
+										<span class="graytips">图片为jpg, png 或 gif 格式；最大允许2MB</span> </td>
+								</tr>
+								<tr bgcolor="#f2f7fc">
+									<td width="15%">
+									</td>
+									<td width="85%" style="padding:5px;">
+										<div class="tpyh-kuang-tp">
+											<ul style="padding:0px;" class="layui-clear">
+												<li id="firstimg"><img src="images/no_img.gif" alt="" border=""><button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+													<p><input name="" type="text" placeholder="请输入英文名称"></p>
+												</li>
+											</ul>
+											<div>提示：<span style="color:red">您一次可以上传10张图片，并编辑图片名称，中文名称的图片不能上传，</span>选择的图片单张大小不可超过2MB，支持jpg,gif,png</div>
+											<div id="unuploadpic" style="display: none">一次最多上传10张图片,<span id="imgs"></span>没有上传</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td width="15%">
+										<label for="PictureBank_groupid">分组</label><span style="color:red">*</span>
+									</td>
+									<td width="85%">
+										<label>
+                            <select name="PictureBank[groupid]" id="PictureBank_groupid"><option>所有分组</option>                                <option pid="0" value="10460">96</option>
+                                                                <option pid="0" value="10780">test</option>
+                                                                    <option pid="10780" value="10781">&nbsp;&nbsp;&nbsp;&nbsp;test2</option>                                <option pid="0" value="10459">97</option>
+                                                                <option pid="0" value="10458">98</option>
+                                                                <option pid="0" value="10457">99</option>
+                                                                <option pid="0" value="9795">1321</option>
+                                                                <option pid="0" value="8604">LED screen</option>
+                                                                <option pid="0" value="8597">11</option>
+                                                                <option pid="0" value="8596">12</option>
+                                                                <option pid="0" value="8595">13</option>
+                                                                <option pid="0" value="8594">14</option>
+                                                                <option pid="0" value="8592">16</option>
+                                                                <option pid="0" value="8593">15</option>
+                                                                <option pid="0" value="8591">17</option>
+                                                                <option pid="0" value="8590">18</option>
+                                                                <option pid="0" value="8589">19</option>
+                                                                <option pid="0" value="8588">20</option>
+                                                                <option pid="0" value="8587">988</option>
+                                                                <option pid="0" value="8517">test1</option>
+                                                                <option pid="0" value="8068">9</option>
+                                                                <option pid="0" value="8067">8</option>
+                                                                <option pid="0" value="8069">66</option>
+                                                                <option pid="0" value="8065">6</option>
+                                                                <option pid="0" value="8066">7</option>
+                                                                <option pid="0" value="8064">5</option>
+                                                                <option pid="0" value="8063">4</option>
+                                                                <option pid="0" value="8062">3</option>
+                                                                <option pid="0" value="8060">1</option>
+                                                                <option pid="0" value="8061">2</option>
+                                                                <option pid="8061" value="8070">&nbsp;&nbsp;&nbsp;&nbsp;22</option>                                <option pid="0" value="8019">SSDDW</option>
+                                                                <option pid="0" value="7633">223</option>
+                                                                <option pid="0" value="7632">222</option>
+                                </select>                                                    </label>
+									</td>
+								</tr>
+
+								<tr nowrap="" bgcolor="#f2f7fc" id="">
+									<td></td>
+									<td align="left">
+										<button id="submit_button" name="yt0" type="button" disabled="disabled" >保存</button>
+										<input onclick="location.href=&quot;http://member.bossgoo.com/member/attach/pictureBank&quot;" type="reset" name="yt1" value="返回上一页"> </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		
+		<div class="xj_class">
+			<form action="" class="layui-form">
+				 <div class="layui-form-item">
+			    <label class="layui-form-label">分类名称</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			</form>
+		</div>
+		<div class="xg_class">
+			<form action="" class="layui-form">
+				<div class="layui-form-item">
+			    <label class="layui-form-label">子分类名称</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+			    </div>
+			  </div>
+			</form>
+		</div>
+	
+
+
+		<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			;
+			! function() {
+				//无需再执行layui.use()方法加载模块，直接使用即可
+				var form = layui.form,
+					layer = layui.layer,
+					laydate = layui.laydate;
+				laydate.render({
+					elem: '#test1', //指定元素
+					range: true
+				});
+			}();
+		</script>
+
+	</body>
+
+</html>
+<script type="text/javascript">
+	$('#groups li').not('.bank-cate-list-sub li').hover(function() {
+		$(this).css('background', '#4b9afd')
+		$(this).children('.bank-cate-list-name').css({
+			'line-height': '35px',
+			'height': '85px'
+		});
+		$(this).children('.bank-cate-list-name').find('a').css({
+			'font-weight': 'bold',
+			'color': '#fff'
+		})
+		$(this).find('.bank-cate-list-btn').fadeIn();
+		return false;
+	}, function() {
+		$(this).css('background', '#f2f2f2')
+		$(this).find('.bank-cate-list-btn').fadeOut();
+		$(this).children('.bank-cate-list-name').find('a').css({
+			'font-weight': 'normal',
+			'color': '#282828'
+		})
+		$(this).children('.bank-cate-list-name').css({
+			'line-height': '55px',
+			'height': '55px'
+		});
+		return false;
+	})
+
+	$('.bank-r-midl span').on('click', function() {
+		layer.open({
+			type: 1,
+			skin: 'showcasealert',
+			title: '上传图片',
+			area: ['600px', '400px'],
+			shadeClose: true, //点击遮罩关闭
+			content: $('.col-1'),
+			btn: ['确定'],
+			yes: function(index, layero) {
+				layer.close(index);
+			}
+		});
+	})
+	
+	$('.bank-cate-title i').on('click', function() {
+		layer.open({
+			type: 1,
+			title: '新建分组',
+			area: ['400px', 'auto'],
+			shadeClose: true, //点击遮罩关闭
+			content: $('.xj_class'),
+			btn: ['确定'],
+			yes: function(index, layero) {
+				layer.close(index);
+			}
+		});
+	})
+	$('.add').on('click', function() {
+		layer.open({
+			type: 1,
+			title: '新建子分类',
+			area: ['400px', 'auto'],
+			shadeClose: true, //点击遮罩关闭
+			content: $('.xg_class'),
+			btn: ['确定'],
+			yes: function(index, layero) {
+				layer.close(index);
+			}
+		});
+	})
+</script>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>BOSSGOO</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<!--头部-->
+			<div class="layui-header">
+				<div class="layui-logo">
+					<img src="images/logo_01.png" style="width: 200px;" />
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="nav_name layui-layout-left">
+					名师讲堂
+				</div>
+				<ul class="layui-nav nav_top layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							我要管理
+							<span class="all_lang lang_en"></span>
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child evlang">
+							<dd>
+								<a href=""><span class="all_lang lang_en"></span>英语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_es"></span>西班牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ru"></span>俄语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_fr"></span>法语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_de"></span>德语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_jp"></span>日语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_kr"></span>韩语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_it"></span>意大利语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_nl"></span>荷兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_gr"></span>希腊语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_se"></span>瑞典语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pl"></span>波兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_th"></span>泰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_tr"></span>土耳其语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_hi"></span>印地语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_id"></span>印尼语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ms"></span>马来语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_vi"></span>越南语</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							<img src="images/user_nan.png" class="layui-nav-img"> demo
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">修改密码</a>
+							</dd>
+							<dd>
+								<a href="">我的反馈</a>
+							</dd>
+							<dd>
+								<a href="">推荐有礼</a>
+							</dd>
+							<dd>
+								<a href="">我的订单</a>
+							</dd>
+							<dd>
+								<a href="">充值中心</a>
+							</dd>
+							<dd>
+								<a href="">升级会员</a>
+							</dd>
+							<dd>
+								<a href="">会员续费</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/zhandian.png" /> 我的站点</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/tuichu.png" /> 退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航-->
+			<div class="layui-side cg_nav_balck">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_1.png" class="nav_icon" /> 首页</a>
+						</li>
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon" /> 产品管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a>
+								</dd>
+								<!--<dd><a href="">超链接</a></dd>-->
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon" /> 询盘管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_3.png" class="nav_icon" /> 营销中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon" /> 培训中心</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_5.png" class="nav_icon" /> 新闻中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_6.png" class="nav_icon" /> 视频中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_7.png" class="nav_icon" /> 数据管家</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon" /> 公司信息</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon" /> 网站设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主题内容-->
+			<div class="layui-body">
+				<button class="layui-btn layui-btn-normal" id="tantantan">
+					点我弹弹弹弹弹弹
+				</button>
+			</div>
+			<!--底部版权-->
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+			</div>
+		</div>
+		</div>
+
+		<div class="imgbanklaert layui-form layui-clear" style="display: none;">
+			<div class="imgbanklaertl">
+				<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+					<ul class="layui-tab-title">
+						<li class="layui-this">图片银行选取</li>
+						<li>上传新图片</li>
+					</ul>
+					<div class="layui-tab-content">
+						<div class="layui-tab-item layui-show">
+							<div class="bankfilter">
+								<div class="layui-inline">
+									<select name="city" lay-verify="required">
+										<option value=""></option>
+										<option value="0">北京</option>
+										<option value="1">上海</option>
+										<option value="2">广州</option>
+										<option value="3">深圳</option>
+										<option value="4">杭州</option>
+									</select>
+								</div>
+								<div class="layui-inline">
+									<input type="text" class="layui-input" placeholder="图片名称" />
+								</div>
+								<div class="layui-inline">
+									<input type="text" class="layui-input" placeholder="选择日期区间" id="date"/>
+								</div>
+								<div class="layui-inline">
+									<button class="layui-btn layui-btn-normal">
+					  					搜索
+					  				</button>
+								</div>
+							</div>
+							<div class="bankchosimglist">
+								<ul class="layui-clear">
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+									<li>
+										<img src="images/navimg_03.png" alt="" />
+										<span>
+											All photos
+										</span>
+									</li>
+								</ul>
+							</div>
+							<div>
+								分页分页分页分页分页分页分页分页
+							</div>
+						</div>
+						<div class="layui-tab-item">
+							<div class="bd_upimg">
+								<div class="layui-form-item">
+							      <label class="layui-form-label">上传到</label>
+							   	  <div class="layui-input-block">
+							   	  	<select name="city" lay-verify="required">
+								        <option value=""></option>
+								        <option value="0">北京</option>
+								        <option value="1">上海</option>
+								        <option value="2">广州</option>
+								        <option value="3">深圳</option>
+								        <option value="4">杭州</option>
+								    </select>
+							      </div>
+							  	</div>
+							  	<div class="layui-form-item">
+							      <label class="layui-form-label"></label>
+							   	  <div class="layui-input-block">
+							   	  	<button class="layui-btn layui-btn-normal">
+							   	  		上传图片
+							   	  		<input type="file" name="" id="" value="" />
+							   	  	</button>
+							      </div>
+							  	</div>
+							  	<div class="layui-form-item">
+							      <label class="layui-form-label"></label>
+							   	  <div class="layui-input-block">
+										<p>注：1、上传的图片不得大于500K</p>
+										<p>2、最多上传5张图片</p>
+							      </div>
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bankchosimgbto">
+					<ul class="layui-clear">
+						<li>
+							<p>已使用<span>2</span>次</p>
+							<span>
+								<img src="images/navimg_03.png"/>
+								<i class="layui-icon">
+									&#x1007;
+								</i>
+							</span>
+							<section>
+								<input  class="layui-input" placeholder="请输入英文名"/>
+							</section>
+						</li>
+						<li>
+							<p>已使用<span>2</span>次</p>
+							<span>
+								<img src="images/navimg_03.png"/>
+							</span>
+							<section>
+								<input  class="layui-input" placeholder="请输入英文名"/>
+							</section>
+						</li>
+						<li>
+							<p>已使用<span>2</span>次</p>
+							<span>
+								<img src="images/navimg_03.png"/>
+								<i class="layui-icon">
+									&#x1007;
+								</i>
+							</span>
+							<section>
+								<input  class="layui-input" placeholder="请输入英文名"/>
+							</section>
+						</li>
+						<li>
+							<p>已使用<span>2</span>次</p>
+							<span>
+								<img src="images/navimg_03.png"/>
+								<i class="layui-icon">
+									&#x1007;
+								</i>
+							</span>
+							<section>
+								<input  class="layui-input" placeholder="请输入英文名"/>
+							</section>
+							
+						</li>
+						<li>
+							<p>已使用<span>2</span>次</p>
+							<span>
+								<img src="images/no_img.gif"/>
+								<i class="layui-icon">
+									&#x1007;
+								</i>
+							</span>
+							
+							<section>
+								<input  class="layui-input" placeholder="请输入英文名"/>
+							</section>
+							
+						</li>
+					</ul>
+					<div class="bankchosimgbtobtn">
+						<button class="layui-btn layui-btn-normal">
+							确 认
+						</button>
+						<p>确认后上传的新图片将进行图片银行</p>
+					</div>
+				</div>
+			</div>
+			<div class="imgbanklaertr">
+				<p class="imgbanklaertrtit">
+					水印设置
+				</p>
+				<div class="ind_set_itemcon w_mark">
+					<div class="evimgbankr">
+						<section class="w_mark_top">
+							<input type="checkbox" name="" title="会员站" lay-skin="primary">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary"><span>会员站</span><i class="layui-icon"></i></div>
+						</section>
+						<div class="w_markbto">
+							<input type="radio" name="jz1" value="nv" title="左上" checked="" lay-filter="filter">
+							<input type="radio" name="jz1" value="nv" title="居中" lay-filter="filter">
+							<input type="radio" name="jz1" value="nv" title="右下" lay-filter="filter">
+						</div>
+						<div class="w_markimgcon">
+							<img src="images/sy1.png" alt="" class="active">
+							<img src="images/sy2.png" alt="">
+							<img src="images/sy.png" alt="">
+						</div>
+
+					</div>
+					<div class="evimgbankr">
+						<section class="w_mark_top">
+							<input type="checkbox" name="" title="独立站" lay-skin="primary">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary"><span>独立站</span><i class="layui-icon"></i></div>
+						</section>
+						<div class="w_markbto">
+							<input type="radio" name="jz" value="nv" title="左上" checked="" lay-filter="filter">
+							<input type="radio" name="jz" value="nv" title="居中" lay-filter="filter">
+							<input type="radio" name="jz" value="nv" title="右下" lay-filter="filter">
+						</div>
+						<div class="w_markimgcon">
+							<img src="images/sy1.png" alt="" class="active">
+							<img src="images/sy2.png" alt="">
+							<img src="images/sy.png" alt="">
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			;! function() {
+				//无需再执行layui.use()方法加载模块，直接使用即可
+				var form = layui.form,
+					layer = layui.layer,
+					laydate = layui.laydate;
+					laydate.render({ 
+						  elem: '#date'
+						  ,range: true
+						  //,type: 'date' //默认，可不填
+					});
+					form.on('radio(filter)', function(data) {
+						var imgshowidex = $(data.elem).index() / 2
+						$(this).parents('.w_markbto').siblings('.w_markimgcon').children('img').eq(imgshowidex).addClass('active').siblings().removeClass('active')
+					});
+					$('#tantantan').on('click', function() {
+						layer.open({
+							type: 1,
+							skin: 'upfilealert',
+							title: '图片银行',
+							area: ['auto'],
+							shadeClose: true, //点击遮罩关闭
+							content: $('.imgbanklaert'),
+//							btn: ['确定'],
+							yes: function(index, layero) {
+								layer.close(index);
+							}
+						});
+					})
+					
+			$('.bankchosimgbtobtn button').click(function  () {
+				layer.closeAll()
+			})
+				//…
+			}();
+			
+			
+		</script>
+
+	</body>
+
+</html>

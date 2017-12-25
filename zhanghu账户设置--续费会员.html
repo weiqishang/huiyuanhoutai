@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BOSSGOO</title>
+  <link rel="stylesheet" href="layui/css/layui.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+	  <div class="layui-header">
+	    <div class="layui-logo">
+	    		<img src="images/logo_01.png" style="width: 200px;"/>
+	    </div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	   <div class="nav_name layui-layout-left">
+	   		续费会员
+	   </div>
+	    <ul class="layui-nav nav_top layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	          		我要管理
+	          		<span class="all_lang lang_en"></span>
+	          		 	<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child evlang">
+	          <dd><a href=""><span class="all_lang lang_en"></span>英语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_es"></span>西班牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ru"></span>俄语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_fr"></span>法语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_de"></span>德语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_jp"></span>日语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_kr"></span>韩语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_it"></span>意大利语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_nl"></span>荷兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_gr"></span>希腊语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_se"></span>瑞典语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pl"></span>波兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_th"></span>泰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_tr"></span>土耳其语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_hi"></span>印地语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_id"></span>印尼语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ms"></span>马来语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_vi"></span>越南语</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	        	<img src="images/user_nan.png" class="layui-nav-img">
+	          		demo
+	          		<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">修改密码</a></dd>
+	          <dd><a href="">我的反馈</a></dd>
+	          <dd><a href="">推荐有礼</a></dd>
+	          <dd><a href="">我的订单</a></dd>
+	          <dd><a href="">充值中心</a></dd>
+	          <dd><a href="">升级会员</a></dd>
+	          <dd><a href="">会员续费</a></dd>       
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href=""><img src="images/zhandian.png"/> 我的站点</a></li>
+	      <li class="layui-nav-item"><a href=""><img src="images/tuichu.png"/> 退出</a></li>
+	    </ul>
+	  </div>
+	  <!--左侧导航-->
+	  <div class="layui-side cg_nav_balck">
+	    <div class="layui-side-scroll">
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+	      	<li class="layui-nav-item"><a href=""> <img src="images/nav_icon_1.png" class="nav_icon"/>  首页</a></li>
+	        <li class="layui-nav-item layui-nav-itemed">
+	          <a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon"/>  产品管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a></dd>
+	            <!--<dd><a href="">超链接</a></dd>-->
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon"/>  询盘管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_3.png" class="nav_icon"/>  营销中心</a></li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon"/>  培训中心</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""> <img src="images/nav_icon_5.png" class="nav_icon"/>  新闻中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_6.png" class="nav_icon"/>  视频中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_7.png" class="nav_icon"/>  数据管家</a></li>
+	       	 <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon"/>  公司信息</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a></dd>
+	          </dl>
+	        </li>
+	       <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon"/>  网站设置</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a></dd>
+	          </dl>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <!--主题内容-->
+	  <div class="layui-body">
+		<div class="min_hei box-shaodw">
+			<div class="renew">
+				<div class="renew_top">
+					<div class="renew_toptitp">
+						续费套餐
+					</div>
+					<p>金牌会员除了拥有更多的功能、可以发布更多的信息，而且在同类公司中享有优先排序特权，优先获得买家关注。</p>
+					<p>金牌会员拥有多语言国际营销独立网站，面向小语种本地化搜索引擎做了大量优化，并整合了PPC（按点击付费广告）、EDM（电子邮件营销）、</p>
+					<p>社交媒体营销等，让全球非英语国家的买家也可以通过本地语言找到您。</p>
+					<section class="renew_tel">
+						咨询热线： 400-099-0905
+					</section>
+				</div>
+				<div class="oline_apply">
+					<p class="oline_apply_tit">在线申请</p>
+					<div class="oline_applycon layui-form">
+						<div class="layui-form-item">
+						  <label class="layui-form-label">当前套餐</label>
+						  <div class="layui-input-block">
+						  	<span style="line-height: 36px;">
+						  		标准版
+						  	</span> 
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label">续费套餐</label>
+						  <div class="layui-input-block">
+						  	<input type="checkbox" name="" title="入门版" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="标准版" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="高级版" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="旗舰版" lay-skin="primary"> 
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label">选择语种</label>
+						  <div class="layui-input-block">
+						  	<input type="checkbox" name="" title="英语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="西班牙语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="葡萄牙语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="俄语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="葡萄牙语" lay-skin="primary">
+						  	<input type="checkbox" name="" title="德语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="日语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="韩语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="阿拉伯语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="意大利语" lay-skin="primary">
+						  	<input type="checkbox" name="" title="荷兰语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="希腊语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="瑞典语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="波兰语" lay-skin="primary">
+						  	<input type="checkbox" name="" title="泰语" lay-skin="primary">
+						  	<input type="checkbox" name="" title="土耳其语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="印地语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="印尼语" lay-skin="primary"> 
+						  	<input type="checkbox" name="" title="马来语" lay-skin="primary">
+						  	<input type="checkbox" name="" title="越南语" lay-skin="primary">
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label">备注</label>
+						  <div class="layui-input-block">
+						  	<div class="layui-inline">
+						  		<input type="text" class="layui-input" placeholder="可选" style="width: 400px;"/>
+						  	</div>
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label">验证码</label>
+						  <div class="layui-input-block">
+						  	<div class="layui-inline">
+						  		<input type="text" class="layui-input" placeholder="请输出验证码"/>
+						  	</div>
+						  	<div class="layui-inline">
+						  		验证码
+						  	</div>
+						  	<div class="layui-inline">
+						  		<a href="" style="color: #217ae9;">换一组</a>
+						  	</div>
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label"></label>
+						  <div class="layui-input-block">
+						  	<div class="layui-inline">
+						  		<input type="checkbox" name="" title="我愿意收到全球贸易通新产品/服务的通知信" lay-skin="primary"> 
+						  	</div>
+						  </div>
+						</div>
+						<div class="layui-form-item">
+						  <label class="layui-form-label"></label>
+						  <div class="layui-input-block">
+						  	<div class="layui-inline">
+						  		<button class="layui-btn layui-btn-normal">确认</button>
+						  		<button class="layui-btn layui-btn-primary">重置</button>
+						  	</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <!--底部版权-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	  	 版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+	  </div>
+	</div>
+</div>
+<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+;!function(){
+  //无需再执行layui.use()方法加载模块，直接使用即可
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //…
+}();
+
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BOSSGOO</title>
+  <link rel="stylesheet" href="layui/css/layui.css" />
+  <link rel="stylesheet" href="themes/default/default.css" />
+  <link rel="stylesheet" href="css/tooltip.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+	  <div class="layui-header">
+	    <div class="layui-logo">
+	    		<img src="images/logo_01.png" style="width: 200px;"/>
+	    </div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	   <div class="nav_name layui-layout-left">
+	   		公司概况
+	   </div>
+	    <ul class="layui-nav nav_top layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	                    我要管理
+	          <span class="all_lang lang_en"></span>
+	          <span class="layui-nav-more"></span>
+	        </a>    
+	        <dl class="layui-nav-child evlang">
+	          <dd><a href=""><span class="all_lang lang_en"></span>英语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_es"></span>西班牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ru"></span>俄语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_fr"></span>法语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_de"></span>德语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_jp"></span>日语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_kr"></span>韩语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_it"></span>意大利语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_nl"></span>荷兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_gr"></span>希腊语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_se"></span>瑞典语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pl"></span>波兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_th"></span>泰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_tr"></span>土耳其语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_hi"></span>印地语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_id"></span>印尼语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ms"></span>马来语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_vi"></span>越南语</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	        	<img src="images/user_nan.png" class="layui-nav-img">
+	          		demo
+	          		<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">修改密码</a></dd>
+	          <dd><a href="">我的反馈</a></dd>
+	          <dd><a href="">推荐有礼</a></dd>
+	          <dd><a href="">我的订单</a></dd>
+	          <dd><a href="">充值中心</a></dd>
+	          <dd><a href="">升级会员</a></dd>
+	          <dd><a href="">会员续费</a></dd>       
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href=""><img src="images/zhandian.png"/> 我的站点</a></li>
+	      <li class="layui-nav-item"><a href=""><img src="images/tuichu.png"/> 退出</a></li>
+	    </ul>
+	  </div>
+	  <!--左侧导航-->
+	  <div class="layui-side cg_nav_balck">
+	    <div class="layui-side-scroll">
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+	      	<li class="layui-nav-item"><a href=""> <img src="images/nav_icon_1.png" class="nav_icon"/>  首页</a></li>
+	        <li class="layui-nav-item layui-nav-itemed">
+	          <a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon"/>  产品管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a></dd>
+	            <!--<dd><a href="">超链接</a></dd>-->
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon"/>  询盘管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_3.png" class="nav_icon"/>  营销中心</a></li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon"/>  培训中心</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""> <img src="images/nav_icon_5.png" class="nav_icon"/>  新闻中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_6.png" class="nav_icon"/>  视频中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_7.png" class="nav_icon"/>  数据管家</a></li>
+	       	 <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon"/>公司信息</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a></dd>
+	          </dl>
+	        </li>
+	       <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon"/>  网站设置</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a></dd>
+	          </dl>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <!--主题内容-->
+	  <div class="layui-body">
+		<div class="box-shaodw layui-row min_hei con_stitu">
+			<div class="con_stitu_top">
+				<ul>
+					<li class="active">公司基本信息</li>
+					<li>公司注册信息</li>
+					<li>贸易相关信息</li>
+					<li>工厂信息</li>
+				</ul>
+			</div>
+			<div class="con_stitumain">
+				<div class="evestitucon active">
+					<div class="comp_basemain">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							    <label class="layui-form-label">公司名称<b>*</b></label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">企业类型<b>*</b></label>
+							    <div class="layui-input-block">
+							      <input type="checkbox" name="" title="Agent" lay-skin="primary">
+							      <input type="checkbox" name="" title="Distributor/Wholesaler" lay-skin="primary">
+							      <input type="checkbox" name="" title="Manufacturer" lay-skin="primary">
+							      <input type="checkbox" name="" title="Organization" lay-skin="primary">
+							      <input type="checkbox" name="" title="Retailer" lay-skin="primary">
+							      <input type="checkbox" name="" title="Service" lay-skin="primary">
+							      <input type="checkbox" name="" title="Trade Company" lay-skin="primary">
+							      <input type="checkbox" name="" title="Other" lay-skin="primary">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">企业类型 <b>*</b></label>
+							    <div class="layui-input-block">
+							      <div class="industry_list">
+							      	<div class="layui-inline">
+							      		<button class="layui-btn layui-btn-normal">
+							      			选择行业目录
+							      		</button>
+							      	</div>
+							      	<div class="layui-inline industry_listtip changefontcolor">
+							      		您的公司将被罗列在网站所对应的行业目录下，请选择正确的行业目录，最多可选择3个。
+							      	</div>
+							      	<div class="industry_listul">
+							      		<ul>
+							      			<li>Furniture > Dining Room Furniture > Other Dining Room Furniture <i class="layui-icon">&#x1007;</i> </li>
+							      			<li>Industrial Equipment & Components > Conveyor & Parts <i class="layui-icon">&#x1007; </i> </li>
+							      			<li>Lights & Lighting > LED Encapsulation Series > SMD LED <i class="layui-icon">&#x1007; </i> </li>
+							      		</ul>
+							      	</div>
+							      </div>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">主营产品  /  服务 <b>*</b></label>
+							    <div class="layui-input-block mainsellpro"  onclick="tooltip.pop(this, '#fuwu');">
+							    	<div>
+							    		<div class="layui-inline">
+							    			<input type="text" class="layui-input"/>
+							    		</div>
+							    		<div class="layui-inline">
+							    			<input type="text" class="layui-input" />
+							    		</div>
+							    		<div class="layui-inline">
+							    			<input type="text" class="layui-input" />
+							    		</div>
+							    	</div>
+							    	<div>
+							    		<div class="layui-inline">
+								    		<input type="text" class="layui-input" />
+								    	</div>
+								    	<div class="layui-inline">
+								    		<input type="text" class="layui-input" />
+								    	</div>
+								    	<div class="layui-inline">
+								    		<input type="text" class="layui-input" />
+								    	</div>
+							    	</div>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">公司标志</label>
+							    <div class="layui-input-block ">
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn upflie_240">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	<div class="layui-inline upfile240tip">
+							    		<p>图片支持jpg,gif,png格式；图片大小不要超过50K; 推荐尺寸240x120px</p>
+							    		<section>
+							    			为了更好地向客户展示您的公司形象，我们建议您上传公司标志，请不要上传个人照片、
+												产品图片或其他不相关的图片，这将影响您公司形象的展示。
+							    		</section>
+							    	</div>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">公司形象图</label>
+							    <div class="layui-input-block figure">
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							    	
+							   		<p>最多可上传5张形象图。支持jpg,gif,png格式；推荐尺寸400x300px</p>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">公司主页</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input" onclick="tooltip.pop(this, '#wy_ck');">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">公司描述*</label>
+							    <div class="layui-input-block" onclick="tooltip.pop(this, '#gs_ms');">
+							      <textarea name="" rows="" cols="" id="editor_id1" style="width: 100%;height: 270px;" ></textarea>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">全球贸易通认证</label>
+							    <div class="layui-input-block">
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传图片
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+											<p style="color: #eb4f38;">已审核  </p>
+							    	</div>
+							    	<div class="layui-inline upfile240tip">
+							    		<p>图片支持pdf,jpg,png,gif。图片尺寸不得小于500*500px</p>
+							    		<section>
+							    			1、请上传公司营业执照<span style="color: red;">正本</span>或SGS认证。上传营业执照将获得“Audited Supplier”标志；
+												上传SGS认证，将同时获得“Audited Supplier”与“SGS”标志。
+							    		</section>
+							    		<section>
+							    			2、上传的证书只用于审核公司的真实性，不会对外公开。（重新上传证书需要重新审核。）
+							    		</section>
+							    	</div>
+							    </div>
+							</div>
+						</form>
+						<p class="eveprotit">公司视频</p>
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							    <label class="layui-form-label">视频代码</label>
+							    <div class="layui-input-block">
+							      <textarea name="desc" placeholder="请输入内容" class="layui-textarea" onclick="tooltip.pop(this, '#gs_sp');"><iframe height=498 width=510 src='http://player.youku.com/embed/XMjQ3NzQ2OTAyMA==' frameborder=0 'allowfullscreen'></iframe>
+							      </textarea>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">视频URL</label>
+							    <div class="layui-input-block">
+							    	<div class="layui-inline">
+							    		<input type="text"   class="layui-input" style="width: 460px;">
+							    	</div>
+							      <div class="layui-inline">
+							    		例如 http://www.youtube.com/watch?v=BRWKsjaEtKs
+							    	</div>
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">视频图片</label>
+							    <div class="layui-input-block">
+							    	<div class="layui-inline">
+							    		<div class="eve_upfilebtn active">
+												<input type="file"  onchange="readFile(this)">
+													<img src="" alt="" />
+												<span class="eve_upfilebtnicon">
+													<i class="layui-icon"></i>
+													上传文件
+												</span>
+												<span class="imgdelicon"><i class="layui-icon">&#x1007;</i></span>
+											</div>
+							    	</div>
+							      <div class="layui-inline">
+							      	请上传视频替换图片，用于个别国外视频网站在国内无法正常打开的情况。(图片尺寸请与视频保持一致)
+							      </div>
+							    </div>
+							</div>
+							
+						</form>
+						
+						<p class="eveprotit">社交媒体营销</p>
+						<form action="" class="layui-form">
+							<div style="width: 500px;">
+								<div class="layui-form-item">
+							    <label class="layui-form-label">Facebook</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">Twitter</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">Youtube</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">LinkedIn</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">Pinterest</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">Google+</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							<div class="layui-form-item">
+							    <label class="layui-form-label">Instagram</label>
+							    <div class="layui-input-block">
+							      <input type="text"   class="layui-input">
+							    </div>
+							</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<div class="evestitucon">
+					<div class="compreg_msg changewidtd">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+						    <label class="layui-form-label">公司注册信息</label>
+						    <div class="layui-input-block">
+						    	<select name="city" lay-verify="">
+									  <option value="">请选择一个城市</option>
+									  <option value="010">北京</option>
+									  <option value="021">上海</option>
+									  <option value="0571">杭州</option>
+									</select>     
+						    </div>
+						 	</div>
+						 	<div class="layui-form-item">
+						    <label class="layui-form-label">公司法人代表</label>
+						    <div class="layui-input-block">
+						    	<input type="text"  class="layui-input"/>  
+						    </div>
+						 	</div>
+						 	<div class="layui-form-item">
+						    <label class="layui-form-label">公司成立年份</label>
+						    <div class="layui-input-block">
+						    	<select name="city" lay-verify="">
+									  <option value="">请选择一个城市</option>
+									  <option value="010">北京</option>
+									  <option value="021">上海</option>
+									  <option value="0571">杭州</option>
+									</select>     
+						    </div>
+						 	</div>
+						 	<div class="layui-form-item">
+						    <label class="layui-form-label">注册资本</label>
+						    <div class="layui-input-block">
+						    	<input type="text"  class="layui-input" style="display: inline-block;"/>  
+						    	<span class="changefontcolor">例如:US$1 Million Or 10,000RMB</span>
+						    </div>
+						 	</div>
+						 	<div class="layui-form-item">
+						    <label class="layui-form-label">注册资本</label>
+						    <div class="layui-input-block">
+						    	<div class="layui-inline">
+						    		<select name="city" lay-verify="">
+										  <option value="">请选择一个城市</option>
+										  <option value="010">北京</option>
+										  <option value="021">上海</option>
+										  <option value="0571">杭州</option>
+										</select> 
+						    	</div>
+						    	<div class="layui-inline">
+						    		<select name="city" lay-verify="">
+										  <option value="">请选择一个城市</option>
+										  <option value="010">北京</option>
+										  <option value="021">上海</option>
+										  <option value="0571">杭州</option>
+										</select> 
+						    	</div>
+									<div class="layui-inline">
+						    		<select name="city" lay-verify="">
+										  <option value="">请选择一个城市</option>
+										  <option value="010">北京</option>
+										  <option value="021">上海</option>
+										  <option value="0571">杭州</option>
+										</select> 
+						    	</div>
+						    </div>
+						 	</div>
+							<div class="layui-form-item">
+						    <label class="layui-form-label">详细地址</label>
+						    <div class="layui-input-block">
+						    	<input type="text"  class="layui-input" style="width: 780px" onclick="tooltip.pop(this, '#address_zy');"/>  
+						    </div>
+						 	</div>
+						 	<div class="layui-form-item">
+						    <label class="layui-form-label"></label>
+						    <div class="layui-input-block">
+						    	<button	class="layui-btn layui-btn-normal" style="padding: 0 60px;">保存</button>
+						    </div>
+						 	</div>
+						</form>
+					</div>
+					
+				</div>
+				<div class="evestitucon">
+					<div class="compreg_msg">
+						<form action="" class="layui-form">
+						<div class="layui-form-item">
+					    <label class="layui-form-label">主要市场</label>
+					    <div class="layui-input-block">
+					    	<input type="checkbox" name="" title="Africa" lay-skin="primary">
+					    	<input type="checkbox" name="" title="America" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Asia" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Caribbean" lay-skin="primary">
+					    	<input type="checkbox" name="" title="East Europe" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Europe" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Middle East" lay-skin="primary">
+					    	<input type="checkbox" name="" title="North Europe" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Oceania" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Other Markets" lay-skin="primary">
+					    	<input type="checkbox" name="" title="West Europe" lay-skin="primary">
+					    	<input type="checkbox" name="" title="Worldwide" lay-skin="primary">
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">年销售额</label>
+					    <div class="layui-input-block">
+					    	<select name="city" lay-verify="">
+								  <option value="">请选择一个城市</option>
+								  <option value="010">北京</option>
+								  <option value="021">上海</option>
+								  <option value="0571">杭州</option>
+								</select>     
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">出口比例</label>
+					    <div class="layui-input-block">
+					    	<select name="city" lay-verify="">
+								  <option value="">请选择一个城市</option>
+								  <option value="010">北京</option>
+								  <option value="021">上海</option>
+								  <option value="0571">杭州</option>
+								</select>     
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">年采购额</label>
+					    <div class="layui-input-block">
+					    	<select name="city" lay-verify="">
+								  <option value="">请选择一个城市</option>
+								  <option value="010">北京</option>
+								  <option value="021">上海</option>
+								  <option value="0571">杭州</option>
+								</select>     
+					    </div>
+					  </div>
+					  <div class="layui-form-item">
+					    <label class="layui-form-label"></label>
+					    <div class="layui-input-block">
+					    	<button	class="layui-btn layui-btn-normal" style="padding: 0 60px;">保存</button>
+					    </div>
+					  </div>
+					</form>
+					</div>
+					
+				</div>
+				<div class="evestitucon">
+					<div class="compreg_msg">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+						    <label class="layui-form-label">工厂面积</label>
+						    <div class="layui-input-block">
+						    	<select name="city" lay-verify="">
+									  <option value="">请选择一个城市</option>
+									  <option value="010">北京</option>
+									  <option value="021">上海</option>
+									  <option value="0571">杭州</option>
+									</select>   
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">工厂地址</label>
+						    <div class="layui-input-block">
+						    	<input type="text" class="layui-input"/>
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">生产线数</label>
+						    <div class="layui-input-block">
+						    	<input type="text" class="layui-input"  style="width: 170px;display: inline-block;"/>
+						    	 <span class="changefontcolor">请输入数字，如1，2，3...,或Above 20</span>
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">研发人员数量</label>
+						    <div class="layui-input-block">
+						    	<select name="city" lay-verify="">
+									  <option value="">请选择一个城市</option>
+									  <option value="010">北京</option>
+									  <option value="021">上海</option>
+									  <option value="0571">杭州</option>
+									</select>   
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">质检人员数量</label>
+						    <div class="layui-input-block">
+						    	<input type="checkbox" name="" title="Africa" lay-skin="primary">
+						    	<input type="checkbox" name="" title="America" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Asia" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Caribbean" lay-skin="primary">
+						    	<input type="checkbox" name="" title="East Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Middle East" lay-skin="primary">
+						    	<input type="checkbox" name="" title="North Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Oceania" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Other Markets" lay-skin="primary">
+						    	<input type="checkbox" name="" title="West Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Worldwide" lay-skin="primary">
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">公司管理体系证书</label>
+						    <div class="layui-input-block">
+						    	<input type="checkbox" name="" title="Africa" lay-skin="primary">
+						    	<input type="checkbox" name="" title="America" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Asia" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Caribbean" lay-skin="primary">
+						    	<input type="checkbox" name="" title="East Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Middle East" lay-skin="primary">
+						    	<input type="checkbox" name="" title="North Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Oceania" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Other Markets" lay-skin="primary">
+						    	<input type="checkbox" name="" title="West Europe" lay-skin="primary">
+						    	<input type="checkbox" name="" title="Worldwide" lay-skin="primary">
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">OEM服务提供情况</label>
+						    <div class="layui-input-block">
+						    	<select name="city" lay-verify="" style="width: 400px;">
+									  <option value="">请选择一个城市</option>
+									  <option value="010">北京</option>
+									  <option value="021">上海</option>
+									  <option value="0571">杭州</option>
+									</select>   
+						    </div>
+						  </div>
+						  <div class="layui-form-item">
+						    <label class="layui-form-label"></label>
+						    <div class="layui-input-block">
+						   			<button	class="layui-btn layui-btn-normal" style="padding: 0 60px;">保存</button>
+						    </div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <!--底部版权-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	  	 版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+	  </div>
+	</div>
+</div>
+
+
+<div style="display: none;">
+	<div id="address_zy" class="protips mydiv">
+		<span>详细地址注意</span>
+		<p>无须填写国家、省份、城市的内容，系统将为您自动加上，否则会造成重复现象。</p>
+	</div>
+	<div id="fuwu" class="protips mydiv">
+		<span>产品/服务</span>
+		<p>即主营产品，将会出现在您三级域名（会员网站）每个页面公司名称下的公司描述中，使买家在浏览您的网站时，更好地了解您经营的产品。</p>
+	</div>
+	<div id="wy_ck" class="protips mydiv">
+		<span>公司主页注意点</span>
+		<p>网址格式请参考： http://www.bossgoo.com</p>
+	</div>
+	<div id="gs_ms" class="protips mydiv" >
+		<span>公司描述注意点</span>
+		<p>1、内容请控制在100~8000个字符之间</p>
+		<p>2、请填写详细的公司介绍，例如：历史、业绩、经营范围等；</p>
+		<p>3、请不要添加个人联系信息和网址。</p>
+		<p>4、请不要输入HTML代码。</p>
+		<p>5、请不要输入您的邮箱地址等与产品无关的信息。</p>
+	</div>
+	<div id="gs_sp" class="protips mydiv" >
+		<span>视频代码的注意点</span>
+		<p>上传公司介绍视频到第三方视频网站，然后将分享代码插入到输入框，即可获得视频标志。可以使用&lt;embed&gt;&lt;/embed&gt;或&lt;iframe&gt;&lt;/iframe&gt;标签引用。</p>
+		
+	</div>
+	<!--<div id="pro_keywords" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>关键词</span>
+	<p>建议您填写的关键词能正确的体现产品性质，便于全球贸易通在站内更好的推广您的产品，并且通过搜索引擎引流到您的产品，提高产品曝光率。</p>
+	<p>例如：产品名称为 “Low Power Consumption 10W-150W Led Flood Light” 则关键词可以填写为“Low Power Consumption LED Flood Light”, “LED Flood Light”, “10W LED Flood Light”</p>
+	<p class="xiaoxi_xg">关键词的常规写法：</p>
+	<p>1、属性词+中心词，可以是产品名称的同义词或延伸，建议3个单词以上组成；少于64字符；</p>
+	<p>2、单词首字母大写；</p>
+	<p>3、与产品名称密切相关；核心词+特征词；如：核心词【Mole Repeller】+修饰词【Plastic, Tube】</p>
+	<p>4、不能包含China、Supplier、Manufacturer此类词；</p>
+	<p>5、仔细检查单词拼写，避免错误;</p>
+	<p>6、建议关键词与产品数的比例在2.5以上。</p>
+	<p class="xiaoxi_dj">
+		<a href="http://about.bossgoo.com/default/peixunArt/id/18.html" target="blank">查看关键词设置技巧 </a>
+	</p>
+</div>-->
+</div>
+
+
+<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/kindeditor-all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tooltip.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	
+
+	
+	
+	
+	!function(){
+  //无需再执行layui.use()方法加载模块，直接使用即可
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //…
+}();
+ KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id1');
+  });
+function readFile(obj) {
+		var file = obj.files[0];
+		if(!/image\/\w+/.test(file.type)) {
+			layer.msg("请确保文件为图像类型");
+			return false;
+		}
+		var reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onload = function(e) {
+			$(obj).parents('.eve_upfilebtn').find('img').attr('src',this.result)
+			$(obj).parents('.eve_upfilebtn').find('.imgdelicon').show()
+			$(obj).parents('.eve_upfilebtn').find('.eve_upfilebtnicon').hide()
+			$(obj).hide()
+		}	
+	}
+$('.imgdelicon').click(function  () {
+	$(this).siblings('img').attr('src',"")
+	$(this).siblings('.eve_upfilebtnicon').show()
+	$(this).parents('.eve_upfilebtn').find('input').show()
+	$(this).hide();
+	$('input[type=file]').wrap('<form>').closest('form').get(0).reset();
+})
+
+</script> 
+
+</body>
+</html>

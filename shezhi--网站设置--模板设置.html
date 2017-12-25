@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>BOSSGOO</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="themes/default/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<!--头部-->
+			<div class="layui-header">
+				<div class="layui-logo">
+					<img src="images/logo_01.png" style="width: 200px;" />
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="nav_name layui-layout-left">
+					模板设置
+				</div>
+				<ul class="layui-nav nav_top layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							我要管理
+							<span class="all_lang lang_en"></span>
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child evlang">
+							<dd>
+								<a href=""><span class="all_lang lang_en"></span>英语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_es"></span>西班牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ru"></span>俄语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_fr"></span>法语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_de"></span>德语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_jp"></span>日语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_kr"></span>韩语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_it"></span>意大利语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_nl"></span>荷兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_gr"></span>希腊语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_se"></span>瑞典语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pl"></span>波兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_th"></span>泰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_tr"></span>土耳其语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_hi"></span>印地语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_id"></span>印尼语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ms"></span>马来语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_vi"></span>越南语</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							<img src="images/user_nan.png" class="layui-nav-img"> demo
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">修改密码</a>
+							</dd>
+							<dd>
+								<a href="">我的反馈</a>
+							</dd>
+							<dd>
+								<a href="">推荐有礼</a>
+							</dd>
+							<dd>
+								<a href="">我的订单</a>
+							</dd>
+							<dd>
+								<a href="">充值中心</a>
+							</dd>
+							<dd>
+								<a href="">升级会员</a>
+							</dd>
+							<dd>
+								<a href="">会员续费</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/zhandian.png" /> 我的站点</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/tuichu.png" /> 退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航-->
+			<div class="layui-side cg_nav_balck">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_1.png" class="nav_icon" /> 首页</a>
+						</li>
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon" /> 产品管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a>
+								</dd>
+								<!--<dd><a href="">超链接</a></dd>-->
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon" /> 询盘管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_3.png" class="nav_icon" /> 营销中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon" /> 培训中心</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_5.png" class="nav_icon" /> 新闻中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_6.png" class="nav_icon" /> 视频中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_7.png" class="nav_icon" /> 数据管家</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon" /> 公司信息</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon" /> 网站设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主题内容-->
+			<div class="layui-body">
+				<div class="box-shaodw layui-row min_hei template_set template">
+					<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+						<ul class="layui-tab-title">
+							<li class="layui-this">电脑端模板</li>
+							<li>手机端模板</li>
+							<li>自定义装修</li>
+							<li>模板保存</li>
+						</ul>
+						<div class="layui-tab-content">
+							<div class="layui-tab-item  layui-show ">
+								<p class="eveprotit">
+									当前模板 ：峨眉山[橙色]
+								</p>
+								<div class="dq_temp">
+									<div class="layui-inline">
+										<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+									</div>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-normal">
+											应用到小语种
+										</button>
+										<button class="layui-btn layui-btn-normal">
+											预览
+										</button>
+									</div>
+								</div>
+								<p class="eveprotit">
+									模板选择
+								</p>
+								<div class="dq_temp tem_list">
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<span>已启用</span>
+											<a href="">查看</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<a href="" class="tem_listcon">
+											<img src="http://style.bosscdn.com/assets/e76f4de6/en/xl6_orange/screenshot.png" alt="" />
+											<img src="images/jinpai_03.png" alt="" class="vip" />
+										</a>
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="layui-tab-item">
+								<p class="eveprotit">
+									当前模板 ：亚洲（橙色）
+								</p>
+								<div class="dq_temp">
+									<div class="layui-inline">
+										<img src="images/screenshot.png" alt="" class="phone_temp scren_f" />
+									</div>
+									<div class="layui-inline">
+										<button class="layui-btn layui-btn-normal">
+											应用到小语种
+										</button>
+										<button class="layui-btn layui-btn-normal">
+											预览
+										</button>
+									</div>
+								</div>
+								<p class="eveprotit">
+									模板选择
+								</p>
+								<div class="mobile-tmpl-list">
+									<div class="layui-inline">
+										<img src="images/screenshot (3).png" alt="" class="phone_temp scren_f" />
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<span>已启用</span>
+											<a href="">查看</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<img src="images/screenshot (1).png" alt="" class="phone_temp scren_s" />
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+									<div class="layui-inline">
+										<img src="images/screenshot (2).png" alt="" class="phone_temp scren_t" />
+										<p>峨眉山[酒红色]</p>
+										<section>
+											<a href="">启用</a>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="layui-tab-item layui-form">
+								<div class="layui-clear defind_ban_top">
+									<div class="defind_ban_tl">
+										<span class="lk_abtn active">背景图片</span>
+										<span class="lk_abtn">首页布局</span>
+									</div>
+									<div class="defind_ban_tr">
+										<span style="margin-right: 10px;vertical-align: middle;">启用自定义</span>
+										<input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked>
+										<button class="layui-btn layui-btn-radius">预览</button>
+									</div>
+								</div>
+								
+								
+								<div class="defind_ban active addpaddtop">
+									<div class="inde_bg layui-clear">
+										<div class="ind_bg_l">
+											<div class="definupimg">
+												<img src="" alt="" />
+											</div>
+										</div>
+										<div class="ind_bg_r">
+											<div class="addmarbto">
+												<div class="eve_upfilebtn">
+													<input type="file" onchange="readFile(this)">
+													<span class="eve_upfilebtnicon">
+														<i class="layui-icon"></i>
+														上传文件
+													</span>
+											   	</div>
+												<span class="changefontcolor">支持不超过500KB的jpg、gif、png图片上传。</span>
+											</div>
+											<div class="layui-form-item addmarbto">
+												<label class="layui-form-label">背景颜色</label>
+												<div class="layui-input-block">
+												    <input type="text" name="title"  class="color {adjust:false,hash:true} layui-input" name="EtsMemberTheme[nav_color]" id="EtsMemberTheme_nav_color" value="#69FF82">
+												</div>
+											</div>
+											<div class="layui-form-item addmarbto">
+												<label class="layui-form-label">背景设置</label>
+												<div class="layui-input-block">
+													<input type="checkbox" name="" title="平铺" lay-skin="primary"> 
+													<input type="checkbox" name="" title="锁定" lay-skin="primary"> 
+												</div>
+											</div>
+											<div class="layui-form-item addmarbto">
+												<label class="layui-form-label">对齐方式</label>
+												<div class="layui-input-block">
+													<section class="algin_chose">
+														<span class="active">局左</span>
+														<span>居中</span>
+														<span>居右</span>
+													</section>
+												</div>
+											</div>
+											<div style="margin-top: 105px;">
+												<button class="layui-btn layui-btn-normal" style="padding: 0 60px;">保存</button>
+												<button class="layui-btn layui-btn-normal gray">重置</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="defind_ban ">
+									<div class="defind_ban_mid">
+										<div class="defindimgcon definupimg">
+											<img src="" alt="" />
+										</div>
+										<div style="margin-top: 25px;">
+											<div class="layui-inline">
+												<div class="eve_upfilebtn">
+													<input type="file" onchange="readFile(this)">
+													<span class="eve_upfilebtnicon">
+														<i class="layui-icon"></i>
+														上传文件
+													</span>
+											   	</div>
+											</div>
+											<div class="layui-inline changefontcolor">
+												请上传一个940*112的Banner图片
+											</div>
+										</div>
+										 <div class="layui-form-item set_color">
+										    <label class="layui-form-label">设置导航栏背景色</label>
+										    <div class="layui-input-block">
+										      <input type="text" name="title"  class="color {adjust:false,hash:true} layui-input" name="EtsMemberTheme[nav_color]" id="EtsMemberTheme_nav_color" value="#69FF82">
+										    </div>
+										  </div>
+										  <div class="defin_code">
+										  	<p>填写自定义布局代码</p>
+										  	<textarea name="" rows="" cols="" id="editor_id1" style="width: 100%;height: 350px;"></textarea>
+										  </div>
+									</div>
+									<div class="defind_ban_bto">
+										<button class="layui-btn layui-btn-normal">
+											保 存
+										</button>
+										<button class="layui-btn layui-btn-normal gray">
+											重 置
+										</button>
+									</div>
+								</div>
+								
+							</div>
+							<div class="layui-tab-item">
+								<div class="tempsave">
+									<div class="layui-inline">
+										<img src="images/screenshot.jpg" alt="" />
+										<p>
+											<a href="">查看大图</a>
+											<a href="">更新装修</a>
+										</p>
+									</div>
+									<div class="layui-inline">
+										<img src="images/screenshot.jpg" alt="" />
+										<p>
+											<a href="">查看大图</a>
+											<a href="">更新装修</a>
+										</p>
+									</div>
+									<div class="layui-inline">
+										<img src="images/screenshot.jpg" alt="" />
+										<p>
+											<a href="">查看大图</a>
+											<a href="">更新装修</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部版权-->
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+			</div>
+		</div>
+		</div>
+		<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/kindeditor-all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jscolor.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			
+			 KindEditor.ready(function(K) {
+  		 	 window.editor = K.create('#editor_id1');
+ 				 });
+			;
+			! function() {
+				//无需再执行layui.use()方法加载模块，直接使用即可
+				var form = layui.form,
+					layer = layui.layer;
+
+				//…
+				$('.scren_f').on('click',function  () {
+					layer.open({
+					  skin: 'phone-bg',
+					  type: 2,
+					  title: false,
+					  shadeClose: true,
+					  shade: 0.8,
+					  closeBtn: 0,
+					  area: ['346px', '618px'],
+					  content: 'http://member.bossgoo.com/ets/preview.html?tid=1503&device=1' 
+					}); 
+				})
+				$('.scren_s').on('click',function  () {
+					layer.open({
+					  skin: 'phone-bg',
+					  type: 2,
+					  title: false,
+					  shadeClose: true,
+					  shade: 0.8,
+					  closeBtn: 0,
+					  area: ['346px', '618px'],
+					  content: 'http://member.bossgoo.com/ets/preview.html?tid=622&device=1' 
+					}); 
+				})
+				$('.scren_t').on('click',function  () {
+					layer.open({
+					  skin: 'phone-bg',
+					  type: 2,
+					  title: false,
+					  shadeClose: true,
+					  shade: 0.8,
+					  closeBtn: 0,
+					  area: ['346px', '618px'],
+					  content: 'http://member.bossgoo.com/ets/preview.html?tid=621&device=1' 
+					}); 
+				})
+				
+			}();
+			
+			$('.inde_bg .ind_bg_r .algin_chose span').click(function  () {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+			$('.defind_ban_tl span').each(function  (i) {
+				$(this).click(function  () {
+					$(this).addClass('active').siblings().removeClass('active')
+					$('.defind_ban').eq(i).addClass('active').siblings().removeClass('active')
+				})
+			})
+			function readFile(obj) {
+				var file = obj.files[0];
+				if(!/image\/\w+/.test(file.type)) {
+					layer.msg("请确保文件为图像类型");
+					return false;
+				}
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function(e) {
+					$(obj).parents('.defind_ban').find('img').attr('src',this.result)
+				}	
+			}
+		</script>
+
+	</body>
+
+</html>

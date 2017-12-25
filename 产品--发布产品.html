@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BOSSGOO</title>
+  <link rel="stylesheet" href="layui/css/layui.css" />
+  <link rel="stylesheet" href="themes/default/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/tooltip.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+	  <div class="layui-header">
+	    <div class="layui-logo">
+	    		<img src="images/logo_01.png" style="width: 200px;"/>
+	    </div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	   <div class="nav_name layui-layout-left">
+	   		发布产品
+	   </div>
+	    <ul class="layui-nav nav_top layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	          		我要管理
+	          		<span class="all_lang lang_en"></span>
+	          		 	<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child evlang">
+	          <dd><a href=""><span class="all_lang lang_en"></span>英语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_es"></span>西班牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ru"></span>俄语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_fr"></span>法语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_de"></span>德语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_jp"></span>日语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_kr"></span>韩语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_it"></span>意大利语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_nl"></span>荷兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_gr"></span>希腊语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_se"></span>瑞典语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pl"></span>波兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_th"></span>泰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_tr"></span>土耳其语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_hi"></span>印地语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_id"></span>印尼语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ms"></span>马来语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_vi"></span>越南语</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	        	<img src="images/user_nan.png" class="layui-nav-img">
+	          		demo
+	          		<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">修改密码</a></dd>
+	          <dd><a href="">我的反馈</a></dd>
+	          <dd><a href="">推荐有礼</a></dd>
+	          <dd><a href="">我的订单</a></dd>
+	          <dd><a href="">充值中心</a></dd>
+	          <dd><a href="">升级会员</a></dd>
+	          <dd><a href="">会员续费</a></dd>       
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href=""><img src="images/zhandian.png"/> 我的站点</a></li>
+	      <li class="layui-nav-item"><a href=""><img src="images/tuichu.png"/> 退出</a></li>
+	    </ul>
+	  </div>
+	  <!--左侧导航-->
+	  <div class="layui-side cg_nav_balck">
+	    <div class="layui-side-scroll">
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+	      	<li class="layui-nav-item"><a href=""> <img src="images/nav_icon_1.png" class="nav_icon"/>  首页</a></li>
+	        <li class="layui-nav-item layui-nav-itemed">
+	          <a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon"/>  产品管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a></dd>
+	            <!--<dd><a href="">超链接</a></dd>-->
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon"/>  询盘管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_3.png" class="nav_icon"/>  营销中心</a></li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon"/>  培训中心</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""> <img src="images/nav_icon_5.png" class="nav_icon"/>  新闻中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_6.png" class="nav_icon"/>  视频中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_7.png" class="nav_icon"/>  数据管家</a></li>
+	       	 <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon"/>公司信息</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a></dd>
+	          </dl>
+	        </li>
+	       <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon"/>  网站设置</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a></dd>
+	          </dl>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <!--主题内容-->
+	  <div class="layui-body">
+	  	<div class="box-shaodw min_hei layui-row up_pro">
+	  		<div class="sh_succ_t">
+				<ul>
+					<li class="active"><span >1</span>选择目录</li>
+					<li><span>2</span>填写信息</li>
+					<li><span>3</span>提交审核</li>
+				</ul>
+			</div>
+				<div class="up_promain">
+				<p class="up_promaintit">
+					您当前选择的目录是：
+					<span>Auto, Motorcycle Parts & Accessories(汽摩及配件)  >  Auto Parts(汽车零件)  >  Car Tire(轿车轮胎)</span>
+					<a href="" class="retu">《返回修改行业目录</a>
+				</p>
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon active"></span>
+						基本信息
+					</p>
+					<div class="promsghid active">
+						<form  class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">产品名称<i>*</i></label>
+								<div class="layui-input-block">
+									<input type="text"  onclick="tooltip.pop(this, '#proTitleTip');" class="layui-input" style="width: 725px;">
+									<span style="display: block;color: #ff5c16;font-size: 14px;">
+										产品名称 不可为空白！
+									</span>
+								</div>
+							</div>
+							<div class="layui-form-item uppro_ketywords">
+							 	<label class="layui-form-label">关键词 <i>*</i></label>
+								<div class="layui-input-block">
+									<input type="text"  class="layui-input" onclick="tooltip.pop(this, '#pro_keywords');" style="width: 600px;display: inline-block;">
+										<button class="layui-btn layui-btn-normal" style="margin-left: 33px;padding: 0 30px;" type="button">
+											检测
+										</button>
+								</div>
+								<div class="layui-input-block">
+									<input type="text"  class="layui-input" style="width: 600px;">
+								</div>
+								<div class="layui-input-block">
+									<input type="text"  class="layui-input" style="width: 600px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">产品型号</label>
+								<div class="layui-input-block">
+									<input type="text"  class="layui-input" style="width: 270px;" onclick="tooltip.pop(this, '#proModel');">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">产品分类</label>
+								<div class="layui-input-block" style="width: 270px;" onclick="tooltip.pop(this, '#pro_class');">
+								    <select name="city" lay-verify="required"  >
+								      <option value=""></option>
+								      <option value="0">作为一级分类</option>
+								      <option value="1">2</option>
+								      <option value="2">3</option>
+								      <option value="3">4</option>
+								       <option value="4">5</option>
+								    </select>
+								   <span class="add_clastip">没有分类？<a href="">马上创建</a></span> 
+								</div>
+							</div>
+							<div class="layui-form-item proupfliecon">
+							 	<label class="layui-form-label">产品图片</label>
+								<div class="layui-input-block">
+									<div class="eve_upfilebtn">
+										<span class="eve_upfilebtnicon">
+											<i class="layui-icon"></i>
+											上传图片
+										</span>
+								   	</div>
+								   	<div class="proupfliecontip">
+								   		<p>图片的上传要求：</p>
+								   		<p>1、图片格式支持jpg、gif或png；尺寸不得小于500*500px，建议1000*1000px以上；大小不超过2MB</p>
+								   		<p>2、为了提高产品的成交率，建议您的产品图片使用高清的细节图作为产品展示图。上传的产品图片最好在拍摄的时候
+	   										  以浅色背景为宜，这样才能更突出产品特征。图片尽可能清晰，让买家在浏览产品时获得更多的产品细节特征。
+								   		</p>
+								   	</div>
+								</div>
+							</div>
+							<div class="layui-form-item proupfliecon">
+							 	<label class="layui-form-label">产品详情<i>*</i></label>
+								<div class="layui-input-block">
+									<textarea name="" rows="" cols="" id="editor_id1" name="content" style="width: 100%;height: 300px;"></textarea>
+									<div class="upprodetailcon">
+										<p>产品详情的常规写法： <a href="">查看产品详情设置技巧</a></p>
+										<p>一般包含产品功能属性、产品细节图片、售后服务、公司实力等内容；不能出现域名，邮箱，电话等信息。</p>
+										<p>从不同角度体现买家所关注的产品特性，包括产品的细节特征、应用范围、参数、质量标准、工艺流程、使用说明、服务等；</p>
+										<p>细节特征、应用范围等建议用一段通顺的介绍，文字清晰，层次分明，要区分段落</p>
+									</div>
+								</div>
+							</div>
+							<div class="layui-form-item proupfliecon">
+							 	<label class="layui-form-label">附件</label>
+								<div class="layui-input-block">
+									<button class="layui-btn layui-btn-normal">上传PDF文件</button>
+									<button class="layui-btn layui-btn-normal">上传ZIP文件</button>
+									<span style="display: block;color: #ff5c16;font-size: 14px;">
+										上传的文件不能超过10MB
+									</span>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon"></span>
+						产品属性 <span>设置完整的产品属性有助于买家更容易找到您的产品</span>
+					</p>
+					<div class="promsghid">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Design</label>
+								<div class="layui-input-block" style="width: 360px;" onclick="tooltip.pop(this, '#proattribute');">
+								    <select name="city" lay-verify="required">
+								      <option value=""></option>
+								      <option value="0">作为一级分类</option>
+								      <option value="1">2</option>
+								      <option value="2">3</option>
+								      <option value="3">4</option>
+								       <option value="4">5</option>
+								    </select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Type</label>
+								<div class="layui-input-block" style="width: 360px;">
+								    <select name="city" lay-verify="required">
+								      <option value=""></option>
+								      <option value="0">作为一级分类</option>
+								      <option value="1">2</option>
+								      <option value="2">3</option>
+								      <option value="3">4</option>
+								       <option value="4">5</option>
+								    </select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Material</label>
+								<div class="layui-input-block" style="width: 360px;">
+								    <select name="city" lay-verify="required">
+								      <option value=""></option>
+								      <option value="0">作为一级分类</option>
+								      <option value="1">2</option>
+								      <option value="2">3</option>
+								      <option value="3">4</option>
+								      <option value="4">5</option>
+								    </select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">更多属性</label>
+								<div class="layui-input-block proper">
+								   <input type="text" class="layui-input" style="width: 360px;" placeholder="属性（例如：size）,最多输入40个字符" onclick="tooltip.pop(this, '#more_attribute_tip');">&nbsp
+								   	 <input type="text" class="layui-input" style="width: 360px;" placeholder="请输入值（例如：12inches），最多输入50个字符的值" onclick="tooltip.pop(this, '#more_attribute_tip');">
+								   
+								</div>
+									<button class="layui-btn layui-btn-normal add_pro" type="button">
+								   		添加属性
+								   	</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon"></span>
+						交易信息
+					</p>
+					<div class="promsghid">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">产品名称</label>
+								<div class="layui-input-block">
+									<input type="checkbox" name="" title="L/C" lay-skin="primary"> 
+									<input type="checkbox" name="" title="T/T" lay-skin="primary"> 
+									<input type="checkbox" name="" title="D/P" lay-skin="primary"> 
+									<input type="checkbox" name="" title="Paypal" lay-skin="primary"> 
+									<input type="checkbox" name="" title="Money Gram" lay-skin="primary"> 
+									<input type="checkbox" name="" title="Western Union" lay-skin="primary"> 
+									<input type="checkbox" name="" title="Others" lay-skin="primary"> 
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">贸易条款</label>
+								<div class="layui-input-block">
+									<input type="checkbox" name="" title="FOB" lay-skin="primary"> 
+									<input type="checkbox" name="" title="CFR" lay-skin="primary"> 
+									<input type="checkbox" name="" title="CIF" lay-skin="primary"> 
+									<input type="checkbox" name="" title="FCA" lay-skin="primary"> 
+									<input type="checkbox" name="" title="CPT" lay-skin="primary"> 
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">交货时间</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 100px;display: inline-block;"/>
+									<span style="display: inline-block;color: #767676;margin-left: 10px;">
+										天
+									</span>
+								</div>
+							</div>
+							<div class="uppro_order">
+								<table class="layui-table">
+								  <colgroup>
+								    <col width="150">
+								    <col width="200">
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>起订量</th>
+								      <th>单价
+								      <input type="checkbox" name="" title="可洽谈" lay-skin="primary" style="float: right;"> 
+								      </th>
+								    </tr> 
+								  </thead>
+								  <tbody >
+								    <tr  class="qj_list">
+								      <td >
+								      	<input type="text" class="layui-input" style="width: 230px;"/>
+										<select name="city" lay-verify="" >
+										  <option value="">请选择一个城市</option>
+										  <option value="010">北京</option>
+										  <option value="021">上海</option>
+										  <option value="0571">杭州</option>
+										</select>    
+								      </td>
+								      <td>
+								      	<input type="text" class="layui-input" style="width: 230px;"/>
+										<select name="city" lay-verify="">
+										  <option value="">请选择一个城市</option>
+										  <option value="010">北京</option>
+										  <option value="021">上海</option>
+										  <option value="0571">杭州</option>
+										</select> 
+								      </td>
+								    </tr>
+								   
+								  </tbody>
+								</table>
+								<button class="layui-btn layui-btn-normal add_qj" style="margin-bottom: 15px;">
+									增加价格区间
+								</button>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+					
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon"></span>
+						物流信息
+					</p>
+					<div class="promsghid">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">运输方式</label>
+								<div class="layui-input-block">
+									<input type="checkbox" name="" title="海运" lay-skin="primary"> 
+									<input type="checkbox" name="" title="陆运" lay-skin="primary"> 
+									<input type="checkbox" name="" title="空运" lay-skin="primary"> 
+									<input type="checkbox" name="" title="其他" lay-skin="primary"> 
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">包装</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 725px;">
+								</div>
+							</div>
+							<div class="layui-form-item port">
+							 	<label class="layui-form-label">发货港口</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" placeholder="发货港口1" style="width: 235px;"/>
+									<input type="text" class="layui-input" placeholder="发货港口2" style="width: 235px;"/>
+									<input type="text" class="layui-input" placeholder="发货港口3" style="width: 235px;"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon"></span>
+						附加信息
+					</p>
+					<div class="promsghid">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">产量</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">原产地</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">品牌</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">供货能力</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">质量/安全认证 </label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">HS编码</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				<div class="promsg">
+					<p class="eveprotit">
+						<span class="moreicon"></span>
+						SEO设置 <span>如果您修改SEO设置，系统会按照您修改的内容显示在营销网站上<span>（不建议自行修改）</span> </span>
+					</p>
+					<div class="promsghid">
+						<form action="" class="layui-form">
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Title</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 360px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Keywords</label>
+								<div class="layui-input-block">
+									<input type="text" class="layui-input" style="width: 680px;">
+								</div>
+							</div>
+							<div class="layui-form-item">
+							 	<label class="layui-form-label">Description</label>
+								<div class="layui-input-block">
+									<textarea name="" rows="" cols="" placeholder="请输入内容" class="layui-textarea" style="width: 680px;"></textarea>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+	 			<div class="up_pro_btn">
+	 				<button class="layui-btn layui-btn-primary">上一步</button>
+	 				<button class="layui-btn layui-btn-normal gray">存为草稿</button>
+	 				<button class="layui-btn layui-btn-normal" style="padding: 0 60px;">发布</button>
+	 			</div>
+	  	</div>
+	  </div>
+	  <!--底部版权-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	  	 版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+	  </div>
+	</div>
+
+<div style="display: none;">
+	 <div id="proTitleTip" class="protips mydiv">
+	<span>产品名称</span>
+	<p>产品名称是匹配关键词搜索、影响产品曝光率的关键，最多可以填写80个字符，可以包括产品基本功能、特点、性能等。</p>
+	<p>例如：Low power consumption 10W-150W led flood light&nbsp; 性能+功率+中心词</p>
+	<p class="xiaoxi_xg">产品名称的常规写法：</p>
+	<p>“属性词+中心词” 如材质、形状、颜色、功能、用途、尺寸、加工工艺、功率、电压、电流等，可使用国际通用型号。 </p>
+	<p> 1.建议4-8个单词组成</p>
+	<p>2.不包含China Manufacturer Supplier等词</p>
+	<p>3.避免重复出现</p>
+	<p>4.避免出现公司内部型号、参数等买家不会搜索的词</p>
+
+	<p class="xiaoxi_dj">
+		<a href="http://about.bossgoo.com/default/peixunArt/id/17.html" target="blank">查看产品标题设置技巧 </a>
+	</p>
+</div>
+<div id="proModel" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<p class="xiaoxi_xg">型号</p>
+	<p>可填写通用型号或工厂命名型号;如BOSS-0001</p>
+</div>
+<div id="pro_keywords" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>关键词</span>
+	<p>建议您填写的关键词能正确的体现产品性质，便于全球贸易通在站内更好的推广您的产品，并且通过搜索引擎引流到您的产品，提高产品曝光率。</p>
+	<p>例如：产品名称为 “Low Power Consumption 10W-150W Led Flood Light” 则关键词可以填写为“Low Power Consumption LED Flood Light”, “LED Flood Light”, “10W LED Flood Light”</p>
+	<p class="xiaoxi_xg">关键词的常规写法：</p>
+	<p>1、属性词+中心词，可以是产品名称的同义词或延伸，建议3个单词以上组成；少于64字符；</p>
+	<p>2、单词首字母大写；</p>
+	<p>3、与产品名称密切相关；核心词+特征词；如：核心词【Mole Repeller】+修饰词【Plastic, Tube】</p>
+	<p>4、不能包含China、Supplier、Manufacturer此类词；</p>
+	<p>5、仔细检查单词拼写，避免错误;</p>
+	<p>6、建议关键词与产品数的比例在2.5以上。</p>
+	<p class="xiaoxi_dj">
+		<a href="http://about.bossgoo.com/default/peixunArt/id/18.html" target="blank">查看关键词设置技巧 </a>
+	</p>
+</div>
+<div id="pro_class" class="protips mydiv" style="">
+	<div class="pro_bztitle">帮助信息</div>
+	<span>产品分类</span>
+	<p>为您的产品选择一个分类，一个产品只能选择一个分类，您可以将同一类的产品添加在相同的分类中，使买家在浏览产品分类时更加快捷。</p>
+	<p>例如：“Prom Dresses”, “Little Black Dresses”</p>
+	<p class="xiaoxi_xg">设置分类的注意点：</p>
+	<p>1.不能采用公司内部型号作为类别。有些公司有自己内部的产品型号，我们不建议你用这些型号设置为产品类别，因为这些型号不是国际通用的。</p>
+	<p>2.要区分分类和产品名称的设置。分类的名称一般一级分类有2个或2个以上关键字组成，二级分类有3个或3个以上的关键字组成。</p>
+	<p class="xiaoxi_dj">
+		<a href="http://about.bossgoo.com/default/peixunArt/id/2.html" target="blank">查看分类设置技巧 </a>
+	</p>
+</div>
+
+<div id="pro_picture" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>产品图片</span>
+	<p>为了提高产品的成交率，建议您的产品图片使用高清的细节图作为产品展示图。上传的产品图片最好在拍摄的时候以浅色背景为宜，这样才能更突出产品特征。图片尽可能清晰，让买家在浏览产品时获得更多的产品细节特征。</p>
+	<p class="xiaoxi_xg">添加水印：</p>
+	<p>金牌会员可以“从本地上传”的图片可以添加水印，默认在左下角，添加水印既美观也可以防止图片被盗用。</p>
+	<p class="xiaoxi_xg">图片的上传要求：</p>
+	<p>1. 图片格式支持jpg、gif或png</p>
+	<p>2. 尺寸不得小于500*500px</p>
+	<p>3. 建议1000*1000px以上</p>
+	<p>4. 大小不超过2MB</p>
+</div>
+<div id="proattribute" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>产品属性</span>
+	<p>产品属性是买家在浏览产品的时候了解产品的重要因素之一，详细的产品属性更有利于促成订单的成交。请详细的描述您产品细节，帮助您的产品提高曝光量，获得更多的商机。</p>
+	<br>
+	<p>例如一个苹果手机</p>
+	<p>品牌: iphone</p>
+	<p>颜色: 白色</p>
+	<p>内存: 64g</p>
+	<p></p>
+	<p>例如认证，运输方式，工作应用等都不能作为属性来阐述</p>
+</div>
+<div id="more_attribute_tip" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>自定义属性</span>
+	<p>当平台设置的属性无法满足您对产品的描述，您可以通过添加自定义的属性，点击“添加更多”，但是最多允许添加10条，使得买家能够更加详细的了解产品，并最终成单。</p>
+</div>
+<div id="pro_instructions" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>产品说明</span>
+	<p>从不同角度体现买家所关注的产品特性，包括产品的细节特征、应用范围、参数、质量标准、工艺流程、使用说明、服务等；细节特征、应用范围等建议用一段通顺的介绍，文字清晰，层次分明，要区分段落</p>
+	<p class="xiaoxi_dj">
+		<a href=" http://about.bossgoo.com/default/peixunArt/id/19.html" target="blank">查看产品说明设置技巧 </a>
+	</p>
+</div>
+<div id="more_price" class="protips mydiv" >
+	<div class="pro_bztitle">帮助信息</div>
+	<span>价格区间</span>
+	<p>购买单个产品和购买大批量产品的价格区别是有所不同的，正确填写产品的价格区间可以方便买家更好的比较产品。尤其是很多产品会随着季节的变化，价格会有浮动，所以我们要针对产品的价格做事实型的调整。</p>
+</div>
+
+</div>
+
+
+
+
+</div>
+<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/kindeditor-all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tooltip.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+;!function(){
+  //无需再执行layui.use()方法加载模块，直接使用即可
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //…
+}();
+
+ KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_id1');
+  });
+  $('.add_pro').click(function  () {
+  	
+  	var addprocon = '<div class="addproinp"> <input type="text" class="layui-input" style="width: 360px;" placeholder="属性（例如：size）,最多输入40个字符">&nbsp'
+							  +' <input type="text" class="layui-input" style="width: 360px;" placeholder="请输入值（例如：12inches），最多输入50个字符的值"> <i class="layui-icon del_addproinp" > &#x1007;</i> </div> '
+  	$('.proper').append(addprocon)
+  })
+  $('.proper').on('click','.del_addproinp',function  () {
+  	$(this).parents('.addproinp').remove()
+  })
+
+
+
+
+</script> 
+
+</body>
+</html>

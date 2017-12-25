@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>BOSSGOO</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/tooltip.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<!--头部-->
+			<div class="layui-header">
+				<div class="layui-logo">
+					<img src="images/logo_01.png" style="width: 200px;" />
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="nav_name layui-layout-left">
+					数据管家
+				</div>
+				<ul class="layui-nav nav_top layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							我要管理
+							<span class="all_lang lang_en"></span>
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child evlang">
+							<dd>
+								<a href=""><span class="all_lang lang_en"></span>英语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_es"></span>西班牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ru"></span>俄语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_fr"></span>法语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_de"></span>德语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_jp"></span>日语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_kr"></span>韩语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_it"></span>意大利语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_nl"></span>荷兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_gr"></span>希腊语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_se"></span>瑞典语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pl"></span>波兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_th"></span>泰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_tr"></span>土耳其语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_hi"></span>印地语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_id"></span>印尼语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ms"></span>马来语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_vi"></span>越南语</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							<img src="images/user_nan.png" class="layui-nav-img"> demo
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">修改密码</a>
+							</dd>
+							<dd>
+								<a href="">我的反馈</a>
+							</dd>
+							<dd>
+								<a href="">推荐有礼</a>
+							</dd>
+							<dd>
+								<a href="">我的订单</a>
+							</dd>
+							<dd>
+								<a href="">充值中心</a>
+							</dd>
+							<dd>
+								<a href="">升级会员</a>
+							</dd>
+							<dd>
+								<a href="">会员续费</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/zhandian.png" /> 我的站点</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/tuichu.png" /> 退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航-->
+			<div class="layui-side cg_nav_balck">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_1.png" class="nav_icon" /> 首页</a>
+						</li>
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon" /> 产品管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a>
+								</dd>
+								<!--<dd><a href="">超链接</a></dd>-->
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon" /> 询盘管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_3.png" class="nav_icon" /> 营销中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon" /> 培训中心</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_5.png" class="nav_icon" /> 新闻中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_6.png" class="nav_icon" /> 视频中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_7.png" class="nav_icon" /> 数据管家</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon" /> 公司信息</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon" /> 网站设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主题内容-->
+			<div class="layui-body">
+				<div class="min_hei layui-row layui-col-space15">
+					<div class="layui-col-md12 layui-col-lg10 layui-col-sm12 min_hei">
+						<div class="datal_top box-shaodw">
+							<p class="datal_toptit">基本概况</p>
+							<div class="layui-row">
+								<div class="layui-inline layui-col-md5 layui-col-lg5 layui-col-sm5 min_hei">
+									<p><span>套餐版本</span>入门版 </p>
+									<p><span>营销网站上线时间</span>2013-04-07 07:27:17 </p>
+									<p><span>营销网站域名</span>
+										<a href="">www.bossgoodemo.com</a>
+									</p>
+									<p><span>会员站域名</span>
+										<a href="">demo.bossgoo.com</a>
+									</p>
+									<p><span>站点服务器</span>
+										英语（美国加州 )
+										<a href="#" class="active" onclick="tooltip.pop(this, '#zd');">查看所有站点</a>
+									</p>
+								</div>
+								<div class="layui-inline layui-col-md5 layui-col-lg5 layui-col-sm5">
+									<p><span>关键词达标情况</span>达标 </p>
+									<p><span>营销网站达标服务时间</span>2017年08月， 服务时间共36个月</p>
+									<p><span>营销网站预计到期时间</span>
+										<a href="">2020年08月</a>
+									</p>
+									<p><span>历史关键词达标情况</span>
+										<a href="">您已达标 <span class="active">1</span>个月
+											<a href="#" class="active" onclick="tooltip.pop(this, '#ckyear');">查看</a>
+										</a>
+									</p>
+								</div>
+								<div class="layui-inline layui-col-md2 layui-col-lg2 layui-col-sm2">
+									<p>产品内容质量</p>
+									<div class="xxpj">
+										<img src="images/xingxing_03.png" />
+										<img src="images/xingxing_03.png" />
+										<img src="images/xingxing_03.png" />
+										<img src="images/xingxing_03.png" />
+										<img src="images/huixing.png" />
+									</div>
+									<button class="layui-btn layui-btn-normal">
+										下载完整报告
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="layui-row web_data dataindex  box-shaodw min_hei" >
+							<div>
+								<div class="webdata_card dataindex_card">
+									<div class="evetwidtit layui-clear">
+										<span>网站数据 </span>
+										<div class="titmore">
+											<input type="text" id="test1" class="layui-input">
+										</div>
+									</div>
+									<section>
+										<ul>
+											<li><a>2017年06月</a></li>
+											<li><a>2017年07月</a> </li>
+											<li class="active"><a>2017年08月 </a> </li>
+											<li><a>2017年09月</a>  </li>
+										</ul>
+									</section>
+								</div>
+								<div class="layui-row evemonth_data active layui-col-space15">
+									<div class="evedata">
+										<div class="wwbdata_con ys1">
+											<p class="wwbdata_con_t">
+												1051
+											</p>
+											<p class="wwbdata_con_m">
+												询盘数
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys2">
+											<p class="wwbdata_con_t">
+												13510
+											</p>
+											<p class="wwbdata_con_m">
+												产品数
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys3">
+											<p class="wwbdata_con_t">
+												128
+											</p>
+											<p class="wwbdata_con_m">
+												Google排名1-10位
+											</p>
+											<p class="wwbdata_con_b">
+												11-20位 100 <span>|</span> 21-30位 66
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys4">
+											<p class="wwbdata_con_t">
+												3500
+											</p>
+											<p class="wwbdata_con_m">
+												收录页面
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys5">
+											<p class="wwbdata_con_t">
+												15
+											</p>
+											<p class="wwbdata_con_m">
+												产品分类
+											</p>
+											<p class="wwbdata_con_b">
+												04月 78 <span>|</span> 03月 89
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="layui-row evemonth_data layui-col-space15">
+									<div class="evedata">
+										<div class="wwbdata_con ys1">
+											<p class="wwbdata_con_t">
+												6666
+											</p>
+											<p class="wwbdata_con_m">
+												询盘数
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys2">
+											<p class="wwbdata_con_t">
+												13510
+											</p>
+											<p class="wwbdata_con_m">
+												产品数
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys3">
+											<p class="wwbdata_con_t">
+												128
+											</p>
+											<p class="wwbdata_con_m">
+												Google排名1-10位
+											</p>
+											<p class="wwbdata_con_b">
+												11-20位 100 <span>|</span> 21-30位 66
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys4">
+											<p class="wwbdata_con_t">
+												3500
+											</p>
+											<p class="wwbdata_con_m">
+												收录页面
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+									<div class="evedata">
+										<div class="wwbdata_con ys5">
+											<p class="wwbdata_con_t">
+												3500
+											</p>
+											<p class="wwbdata_con_m">
+												收录页面
+											</p>
+											<p class="wwbdata_con_b">
+												本月 31 <span>|</span> 04月 20
+											</p>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="layui-row">
+								<div class="data_chats">
+									<div class="data_chatstit">
+										询盘数量报告 <span class="evdatip">截止 2017-08，您的全球贸易通营销网站包含<span>88</span>  个有效产品</span>
+										<section>
+											<span class="sj_icon1 active"></span>
+											<span class="sj_icon2"></span>
+										</section>
+									</div>
+									<div class="data_chatscon">
+										<div class="evechatscon active">
+											数据图1
+										</div>
+										<div class="evechatscon">
+											数据图2
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="layui-row ">
+								<div class="data_chats">
+									<div class="data_chatstit">
+										询盘数量报告
+										<section>
+											<span class="sj_icon1 active"></span>
+										</section>
+									</div>
+									<div class="data_chatscon">
+										<div class="evechatscon active">
+											数据图1
+										</div>
+										<div class="dataadd">
+											<p>
+												对您全球贸易通营销网站产品进行星级评定，<span>5级</span> 为最高等级
+											</p>
+											<p>
+												产品综合得分：
+											</p>
+											<p>
+												当前您所发布的产品数量为<span>96</span>个，建议发布产品数量为 <span>400</span>个
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="data_table box-shaodw">
+							<p class="data_table_tit">
+								分类收录状况表
+								<span>
+									<a href="#" id="fl_alert">更多>></a>
+								</span>
+							</p>
+							<div class="data_tablecon">
+								<table class="layui-table">
+								  <colgroup>
+								    <col>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>序号</th>
+								      <th>分类名称</th>
+									<th >
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>收录率</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="asc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								    </th>
+								    <th class="products-unit">
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>分类页面收录更新时间</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="desc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								      </th>	
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>75%（288/360）</td>
+								      <td>2017-11-15 09:02:38</td>
+								    </tr>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>75%（288/360）</td>
+								      <td>2017-11-15 09:02:38</td>
+								    </tr>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>75%（288/360）</td>
+								      <td>2017-11-15 09:02:38</td>
+								    </tr>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>75%（288/360）</td>
+								      <td>2017-11-15 09:02:38</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+							<section class="data_table_tit">
+								Top10 页面
+								<section class="layui-inline">
+									当月
+									<i style="color:#276FF1;"> G</i><i style="color:#E63125;">o</i><i style="color:#FBB002;">o</i><i style="color:#276FF1;">g</i><i style="color:#249A41;">l</i><i style="color:#E63125;">e</i>.com首页关键词排名数量最多的前10张页面
+								</section>
+								<span>
+									<a href="#" id="top_alert">其他>></a>
+								</span>
+							</section>
+							<div class="data_tablecon">
+								<table class="layui-table">
+								  <colgroup>
+								    <col>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>序号</th>
+								      <th>域名</th>
+									  <th>关键词数量</th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>18 <a href="#" class="top_ckbtn" onclick="tooltip.pop(this, '#top_ck');">查看</a> </td>
+								    </tr>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>18 <a href="#" class="top_ckbtn" onclick="tooltip.pop(this, '#top_ck');">查看</a> </td>
+								    </tr>
+								    <tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>18 <a href="#" class="top_ckbtn" onclick="tooltip.pop(this, '#top_ck');">查看</a> </td>
+								    </tr>
+								   	<tr>
+								      <td>1</td>
+								      <td>dsafnlqwe > sdadasf </td>
+								      <td>18 <a href="#" class="top_ckbtn" onclick="tooltip.pop(this, '#top_ck');">查看</a> </td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+							
+							<div class="progress">
+								<p class="data_table_tit">
+									网站内容健康状况
+								</p>
+								<div class="prggress_bl">
+									关键词比例 
+									<i class="layui-icon" onclick="tooltip.pop(this, '#wh_con');">&#xe60b;</i>
+									<span>1.6</span>
+								</div>
+								
+								<p class="data_table_tit hong">
+									急需优化
+								</p>
+								
+								<div class="progresscon">
+									<p class="progresstit"> <span>【产品数量】</span> 当前您所发布的产品数量为 92 个，建议发布产品数量为 400 个。</p>
+									<div class="layui-progress layui-progress-big wline w400"  lay-showPercent="yes">
+									  <div class="layui-progress-bar layui-bg-blue" lay-percent="10%"></div>
+									  <span class="spantip  w400">400个（合格线）</span>
+									</div>
+								</div>
+								
+								<div class="progresscon">
+									<p class="progresstit"><span>【分类数量】</span> 您已经发布了 16 个分类。建议发布30个分类以上，最多允许发布 200 个分类。</p>
+									<div class="layui-progress layui-progress-big  wline w30"  lay-showPercent="yes">
+									  <div class="layui-progress-bar layui-bg-blue" lay-percent="10%"></div>
+										 <span class="spantip  w30">30个（合格线）</span>
+									</div>
+								</div>
+								
+							</div>
+
+
+							<p class="data_table_tit cheng">
+								建议优化
+							</p>
+							<div class="optim_com">
+								<p class="optim_tit">
+									<span>【产品名称】</span>      截止2016年年底仍有 73 个产品名称待修改
+									<i class="layui-icon">
+										&#xe61a;
+									</i>
+								</p>
+								<table class="layui-table" lay-skin="nob">
+								  <colgroup>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>产品名称</th>
+								      <th>
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>重复次数</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="asc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								      </th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="optim_com">
+								<p class="optim_tit">
+									<span>【产品关键词】</span>    截止2017年08月仍有 6 个产品关键词待修改
+									<i class="layui-icon">
+										&#xe61a;
+									</i>
+								</p>
+								<table class="layui-table" lay-skin="nob">
+								  <colgroup>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>产品关键词</th>
+								      <th>
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>重复次数</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="asc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								      </th>
+								      <th>
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>匹配产品数</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="asc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								      </th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								      <td>1</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent Mini Cocktail Dress</td>
+								      <td>1</td>
+								      <td>1</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="optim_com">
+								<p class="optim_tit">
+									<span>【产品分类】 </span>    截止2016年年底仍有 8 个产品分类需要修改
+									<i class="layui-icon">
+										&#xe61a;
+									</i>
+								</p>
+								<table class="layui-table" lay-skin="nob">
+								  <colgroup>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>产品关键词</th>
+								      <th>
+								      	产品关键词
+								      </th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>分类介绍为空</td>
+								    </tr>
+								    <tr>
+								      <td>Sheath Column</td>
+								      <td>分类介绍过于简短</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely A-line Sweetheart Strapless Mini Organza </td>
+								      <td>分类介绍为空</td>
+								    </tr>
+								   <tr>
+								      <td>Lovely A-line Sweetheart Strapless Mini Organza </td>
+								      <td>分类介绍为空</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely A-line Sweetheart Strapless Mini Organza </td>
+								      <td>分类介绍为空</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+							<div class="optim_com">
+								<p class="optim_tit">
+									<span>【产品内链】  </span>    截止2016年年底仍有 8 个产品内链数需要调整
+									<i class="layui-icon">
+										&#xe61a;
+									</i>
+								</p>
+								<table class="layui-table" lay-skin="nob">
+								  <colgroup>
+								    <col>
+								    <col>
+								  </colgroup>
+								  <thead>
+								    <tr>
+								      <th>产品名称</th>
+								      <th>
+								      	<div class="layui-table-cell laytable-cell-1-sex">
+								      		<span>内链数量</span>
+								      		<span class="layui-table-sort layui-inline" lay-sort="asc">
+								      			<i class="layui-edge layui-table-sort-asc"></i>
+								      			<i class="layui-edge layui-table-sort-desc"></i>
+								      		</span>
+								      	</div>
+								      </th>
+								    </tr> 
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>0</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>0</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>0</td>
+								    </tr>
+								   <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>0</td>
+								    </tr>
+								    <tr>
+								      <td>Lovely Ball Gown Strapless Taffeta Floral Accent</td>
+								      <td>0</td>
+								    </tr>
+								  </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="layui-col-md12 layui-col-lg2 layui-col-sm12">
+						<div class="chea_tool box-shaodw">
+								<p class="chea_tooltit">
+									内容健康指数
+								</p>
+								<div class="pie" id="base-pie" data-value="0.2">
+									<strong>20</strong>
+									<div class="div_1" style="transform: rotate(0.2turn);"></div>
+									<div class="div_2"></div>
+									<span style="width:70%;height:70%;top:15%;left:15%;background:#fff;"></span>
+								</div>
+								<button class="layui-btn layui-btn-normal">
+									查看详情
+								</button>
+								<section>
+									关键词等检查是检测
+									全球贸易通营销网站
+									关键词等分布的合理
+									性，匹配度和个数等，
+									有助于提高网站排名。
+								</section>
+								<div class="chea_btotit">
+									<img src="images/jiancha.png"/> 检查工具
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!--底部版权-->
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+			</div>
+		</div>
+		</div>
+		
+		<div id="ckyear">
+			分别为: 2017 &nbsp; 2018 &nbsp; 2019 &nbsp; 2020
+		</div>
+		<div id="zd">
+			<p>美国加州</p>
+			<section>
+				<span>西班牙语</span>
+			</section>
+			<p>英国伦敦</p>
+			<section>
+				<span>俄语</span>
+				<span>法语</span>
+				<span>德语</span>
+			</section>
+			<p>日本东京</p>
+			<section>
+				<span>日语</span>
+				<span>韩语</span>
+			</section>
+		</div>
+		
+		<div id="top_ck">
+			<ul>
+				<li>wedding dress</li>
+				<li>wedding dress</li>
+				<li>wedding dress</li>
+				<li>wedding dress</li>
+				<li>wedding dress</li>
+			</ul>
+		</div>
+		
+		<div id="wh_con">
+			每个产品都有3个关键词分配比例,如果数值是3则说明关键词没有重复率。如果数值为2到3，则关键词比例分配还有改进的空间。如果关键词数值在0到2之间，则关键词重复率很高。关键词就必须要修改。
+		</div>
+		<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tooltip.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			;
+			! function() {
+				//无需再执行layui.use()方法加载模块，直接使用即可
+				var form = layui.form,
+					layer = layui.layer,
+					laydate = layui.laydate;
+				laydate.render({
+					elem: '#test1',
+					type: 'month'
+				});
+				//…
+			}();
+		</script>
+
+	</body>
+
+</html>
+<script type="text/javascript">
+	$('.optim_tit').click(function  () {
+		if ($(this).siblings('table').is(':hidden')) {
+			$(this).siblings('table').show()
+		}else{
+			$(this).siblings('table').hide()
+		}
+	})
+//	var oftop = $('.chea_tool').offset().top
+	$(window).load(function  () {
+			var oftop = $('.chea_tool').offset().top
+			$('.layui-body').scroll(function() {
+				if($('.layui-body').scrollTop() > oftop) {
+					$('.chea_tool').addClass('fixed');
+				} else {
+					$('.chea_tool').removeClass('fixed')
+				}
+			})
+	})
+	
+	
+</script>

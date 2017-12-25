@@ -1,0 +1,86 @@
+.xt{
+	position: fixed;
+	right: 20px;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	height: 100px;
+	/*display: none;*/
+}
+.xt_small .xtsmlimg{
+	width: 40px;
+	height: 40px;
+	margin: 10px 0;
+	display: block;
+}
+.xt_small{
+	padding: 1px 9px;
+	position: relative;
+	background: #ff9900;
+}
+.xt_small:hover .xt_big{
+	display: block;
+}
+.xt:hover {
+	transition: all .3s ease-in-out .0s; 
+	right: -58px;
+}
+.xt_big{
+	position: absolute;
+	right: 58px;
+	top: -155px;
+	width: 165px;
+	text-align: center;
+	background: #ff9900;
+	padding: 30px 0;
+	display: none;
+}
+.xt_big img{
+	vertical-align: middle;
+}
+.xt_big .xt_dh{
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.xt_big .xt_dh section{
+	border-bottom: 1px solid #ffffff;
+	padding: 10px 8px;
+	display: inline-block;
+}
+.xt_big .xt_kf img{
+	margin: 10px 0;
+}
+.xt_big .xt_kf p{
+	font-size: 12px;
+	color: #FFFFFF;
+	line-height: 20px;
+}
+.xt_big .xt_kf_tit{
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-top: 10px;
+}
+.xt_big .xt_kf a{
+	font-size: 14px;
+	color: #767676;
+	background: #FFFFFF;
+	display: inline-block;
+	padding: 4px 6px;
+	border-radius: 5px;
+	margin: 5px 0;
+	margin-bottom: 15px;
+}
+.xt_big .xt_qrcode{
+	display: inline-block;
+	border-top: 1px solid #FFFFFF;
+}
+.xt_big .xt_qrcode img{
+	margin: 15px 0;
+}
+.xt_big .xt_qrcode p{
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 22px;
+}

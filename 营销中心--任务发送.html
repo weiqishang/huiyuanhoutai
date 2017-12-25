@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BOSSGOO</title>
+  <link rel="stylesheet" href="layui/css/layui.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+	  <div class="layui-header">
+	    <div class="layui-logo">
+	    	<img src="images/logo_01.png" style="width: 200px;"/>
+	    </div>
+	    <!-- 头部区域（可配合layui已有的水平导航） -->
+	   <div class="nav_name layui-layout-left">
+	   		任务发送
+	   </div>
+	    <ul class="layui-nav nav_top layui-layout-right">
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	          		我要管理
+	          		<span class="all_lang lang_en"></span>
+	          		 	<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child evlang">
+	          <dd><a href=""><span class="all_lang lang_en"></span>英语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_es"></span>西班牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ru"></span>俄语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_fr"></span>法语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_de"></span>德语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_jp"></span>日语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_kr"></span>韩语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_it"></span>意大利语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_nl"></span>荷兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_gr"></span>希腊语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_se"></span>瑞典语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_pl"></span>波兰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_th"></span>泰语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_tr"></span>土耳其语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_hi"></span>印地语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_id"></span>印尼语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_ms"></span>马来语</a></dd>
+	          <dd><a href=""><span class="all_lang lang_vi"></span>越南语</a></dd>
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item">
+	        <a href="javascript:;"  class="lang_show">
+	        	<img src="images/user_nan.png" class="layui-nav-img">
+	          		demo
+	          		<span class="layui-nav-more"></span>
+	        </a>
+	        <dl class="layui-nav-child">
+	          <dd><a href="">基本资料</a></dd>
+	          <dd><a href="">修改密码</a></dd>
+	          <dd><a href="">我的反馈</a></dd>
+	          <dd><a href="">推荐有礼</a></dd>
+	          <dd><a href="">我的订单</a></dd>
+	          <dd><a href="">充值中心</a></dd>
+	          <dd><a href="">升级会员</a></dd>
+	          <dd><a href="">会员续费</a></dd>       
+	        </dl>
+	      </li>
+	      <li class="layui-nav-item"><a href=""><img src="images/zhandian.png"/> 我的站点</a></li>
+	      <li class="layui-nav-item"><a href=""><img src="images/tuichu.png"/> 退出</a></li>
+	    </ul>
+	  </div>
+	  <!--左侧导航-->
+	  <div class="layui-side cg_nav_balck">
+	    <div class="layui-side-scroll">
+	      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+	      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+	      	<li class="layui-nav-item"><a href=""> <img src="images/nav_icon_1.png" class="nav_icon"/>  首页</a></li>
+	        <li class="layui-nav-item layui-nav-itemed">
+	          <a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon"/>  产品管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a></dd>
+	            <!--<dd><a href="">超链接</a></dd>-->
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon"/>  询盘管理</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_3.png" class="nav_icon"/>  营销中心</a></li>
+	        <li class="layui-nav-item">
+	          <a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon"/>  培训中心</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a></dd>
+	          </dl>
+	        </li>
+	        <li class="layui-nav-item"><a href=""> <img src="images/nav_icon_5.png" class="nav_icon"/>  新闻中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_6.png" class="nav_icon"/>  视频中心</a></li>
+	        <li class="layui-nav-item"><a href=""><img src="images/nav_icon_7.png" class="nav_icon"/>  数据管家</a></li>
+	       	 <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon"/>  公司信息</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a></dd>
+	          </dl>
+	        </li>
+	       <li class="layui-nav-item">
+	          <a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon"/>  网站设置</a>
+	          <dl class="layui-nav-child">
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a></dd>
+	            <dd><a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a></dd>
+	          </dl>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	  <!--主题内容-->
+	  <div class="layui-body">
+		<div class="box-shaodw min_hei layui-row">
+			<div class="task_send">
+				<div class="task_sendtop layui-clear">
+					<div class="task_sendtopl">
+						<button class="layui-btn layui-btn-normal">
+							设置发送内容
+						</button>
+					</div>
+					<div class="task_sendtopr">
+						<div class="layui-clear layui-inline">
+						    <label class="layui-form-label">地址</label>
+						    <div class="layui-input-inline">
+						      <input type="text" class="layui-input">
+						    </div>
+						</div>
+						<div class="layui-inline">
+							<button class="layui-btn layui-btn-normal">
+								搜索
+							</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="task_sendbto">
+					<table class="layui-table" lay-skin="line">
+					  <colgroup>
+					    <col>
+					    <col>
+					    <col>
+					  </colgroup>
+					  <thead>
+					    <tr>
+					      <th>序号</th>
+					      <th>地址</th>
+					      <th class="products-unit">
+							<span><span class="unit">国家</span><i class="layui-icon">&#xe61a;</i></span>
+							<div class="ui2-popup-menu" style="display: none;">
+								<ul>
+									<li>
+										Acre/Acres1
+									</li>
+									<li>
+										Acre/Acres2
+									</li>
+									<li>
+										Acre/Acres3
+									</li>
+									<li>
+										Acre/Acres4
+									</li>
+								</ul>
+							</div>
+						  </th>
+					      <th>发布时间</th>
+					      <th>已发布 / 可发布</th>
+					      <th>账号密码</th>
+					    </tr> 
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</td>
+					      <td><a href="">www.asianproducts.com</a></td>
+					      <td>自动注册</td>
+					      <td>2017-09-12 02:17:00</td>
+					      <td>50 / 50</td>
+					      <td>
+					      	<span class="xsbtn">显示</span>
+					      	<section>
+					      		账号:demo5@chinaomen.com,密码:netcecadmin
+					      	</section>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>1</td>
+					      <td><a href="">www.asianproducts.com</a></td>
+					      <td>自动注册</td>
+					      <td>2017-09-12 02:17:00</td>
+					      <td>50 / 50</td>
+					      <td>
+					      	<span class="xsbtn">显示</span>
+					      	<section>
+					      		账号:demo5@chinaomen.com,密码:netcecadmin
+					      	</section>
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>1</td>
+					      <td><a href="">www.asianproducts.com</a></td>
+					      <td>自动注册</td>
+					      <td>2017-09-12 02:17:00</td>
+					      <td>50 / 50</td>
+					      <td>
+					      	<span class="xsbtn">显示</span>
+					      	<section>
+					      		账号:demo5@chinaomen.com,密码:netcecadmin
+					      	</section>
+					      </td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+				</div>
+				<div>
+					分页分页分页分页分页分页分页分页分页分页分页分页分页分页分页分页分页分页分页
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <!--底部版权-->
+	  <div class="layui-footer">
+	    <!-- 底部固定区域 -->
+	  	 版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+	  </div>
+	</div>
+</div>
+<div class="xs_alert">
+	 帐号密码可以登录会员后台查看发布的信息，
+            但任意修改帐号密码，则以后发布的数据都不会
+            同步到该平台，请不要随意修改
+</div>
+<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+;!function(){
+  //无需再执行layui.use()方法加载模块，直接使用即可
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //…
+}();
+
+
+</script> 
+
+</body>
+</html>
+<script type="text/javascript">
+	 var first = true;
+	$('.task_sendbto  .xsbtn').on('click', function() {
+		if (first) {
+			layer.open({
+				type: 1,
+				title: '提示',
+//				shadeClose: true, 
+				content: $('.xs_alert'),
+				btn: ['确定'],
+				yes: function(index, layero) {
+					$('.task_sendbto  .xsbtn').eq(index - 1 ).hide()
+					$('.task_sendbto  .xsbtn').eq(index - 1).siblings('section').show()
+					layer.close(index);
+				}
+			});
+			first = false;
+      return false;
+		}
+		$(this).hide()
+		$(this).siblings('section').show()
+		 
+	})
+	
+	
+        var fObj = null;
+        $('.close').click(function  () {
+            $('.tanchu').hide();
+            $(fObj).hide().next().show();
+        });
+
+        var first = true;
+        $('.xs').click(function() {
+            if(first) {
+                $('.tanchu').show();
+                first = false;
+                fObj = $(this);
+                return false;
+            }
+
+            $(this).hide().next().show();
+        });
+</script>

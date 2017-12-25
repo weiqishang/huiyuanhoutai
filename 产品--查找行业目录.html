@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>BOSSGOO</title>
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<!--头部-->
+			<div class="layui-header">
+				<div class="layui-logo">
+					<img src="images/logo_01.png" style="width: 200px;" />
+				</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<div class="nav_name layui-layout-left">
+					发布产品
+				</div>
+				<ul class="layui-nav nav_top layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							我要管理
+							<span class="all_lang lang_en"></span>
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child evlang">
+							<dd>
+								<a href=""><span class="all_lang lang_en"></span>英语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_es"></span>西班牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pt"></span>葡萄牙语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ru"></span>俄语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_fr"></span>法语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_de"></span>德语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_jp"></span>日语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_kr"></span>韩语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ar"></span>阿拉伯语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_it"></span>意大利语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_nl"></span>荷兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_gr"></span>希腊语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_se"></span>瑞典语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_pl"></span>波兰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_th"></span>泰语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_tr"></span>土耳其语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_hi"></span>印地语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_id"></span>印尼语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_ms"></span>马来语</a>
+							</dd>
+							<dd>
+								<a href=""><span class="all_lang lang_vi"></span>越南语</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" class="lang_show">
+							<img src="images/user_nan.png" class="layui-nav-img"> demo
+							<span class="layui-nav-more"></span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">基本资料</a>
+							</dd>
+							<dd>
+								<a href="">修改密码</a>
+							</dd>
+							<dd>
+								<a href="">我的反馈</a>
+							</dd>
+							<dd>
+								<a href="">推荐有礼</a>
+							</dd>
+							<dd>
+								<a href="">我的订单</a>
+							</dd>
+							<dd>
+								<a href="">充值中心</a>
+							</dd>
+							<dd>
+								<a href="">升级会员</a>
+							</dd>
+							<dd>
+								<a href="">会员续费</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/zhandian.png" /> 我的站点</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href=""><img src="images/tuichu.png" /> 退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航-->
+			<div class="layui-side cg_nav_balck">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_1.png" class="nav_icon" /> 首页</a>
+						</li>
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;"><img src="images/nav_icon_0.png" class="nav_icon" /> 产品管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"> <span class="navl_cyc"></span>产品管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span> 产品管理二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>产品管理三</a>
+								</dd>
+								<!--<dd><a href="">超链接</a></dd>-->
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_2.png" class="nav_icon" /> 询盘管理</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>询盘管理二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_3.png" class="nav_icon" /> 营销中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"><img src="images/nav_icon_4.png" class="nav_icon" /> 培训中心</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>培训中心二</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""> <img src="images/nav_icon_5.png" class="nav_icon" /> 新闻中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_6.png" class="nav_icon" /> 视频中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href=""><img src="images/nav_icon_7.png" class="nav_icon" /> 数据管家</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_8.png" class="nav_icon" />公司信息</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息一</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息二</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>公司信息三</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;"> <img src="images/nav_icon_9.png" class="nav_icon" /> 网站设置</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>会员站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>独立站管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>个性化设置</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><span class="navl_cyc"></span>子账号管理</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--主题内容-->
+			<div class="layui-body">
+				<div class="box-shaodw layui-row issue min_hei">
+					<div class="sh_succ_t">
+						<ul>
+							<li><span class="active">1</span>选择目录</li>
+							<li><span>2</span>填写信息</li>
+							<li><span>3</span>提交审核</li>
+						</ul>
+					</div>
+					<div class="layui-tab layui-tab-brief" lay-filter="issue">
+						<ul class="layui-tab-title">
+							<li class="layui-this">查找行业目录</li>
+							<li>常用目录</li>
+							<li>发布相似产品</li>
+							<div class="sel_input2" id="div_language">
+								<input type="text" class="s_input" name="" value="English Category" id="show_languag_text">
+								<div class="li_list" style="display: none;">
+									<a href="javascript:void(0);">中文目录</a>
+									<a href="javascript:void(0);">English Category</a>
+								</div>
+							</div>
+						</ul>
+						<div class="issuesearch">
+							<form action="" class="layui-form">
+								<input type="text" name="title" class="layui-input">
+								<button class="layui-btn layui-btn-normal">
+							查找目录
+							</button>
+							</form>
+						</div>
+						<div style="display: none;" id="div_search_source" class="search-source" >
+							<div class="search-sailtips">
+								<span class="source-tit">与“<b class="show_search_input" id="show_search_input">arts</b>”相关的类目：</span>
+								<span class="viewticps" id="viewTips">收起<span class="darrow"></span></span>
+							</div>
+							<!--搜索结果内容    -->
+							<div id="searchResourceExpand" class="search-sailtips-box">
+								<ul>
+									<li data-valid="1" data-en="Apparel &amp; Accessories > Belt &amp; Accessories > Belt Parts &amp; Accessories" data-cn="服装饰件 > 腰带及饰物 > 腰带配件" data-catid="106"><input type="radio">Apparel &amp; Accessories &gt; Belt &amp; Accessories &gt; Belt Parts &amp; Accessories</li>
+									<li data-valid="1" data-en="Arts &amp; Crafts > Arts &amp; Crafts Stocks" data-cn="工艺品 > 库存工艺品" data-catid="210"><input type="radio">Arts &amp; Crafts &gt; Arts &amp; Crafts Stocks</li>
+									<li data-valid="1" data-en="Arts &amp; Crafts > Jewelry > Jewelry Parts" data-cn="工艺品 > 珠宝首饰 > 首饰部件" data-catid="275"><input type="radio">Arts &amp; Crafts &gt; Jewelry &gt; Jewelry Parts</li>
+									<li data-valid="1" data-en="Auto, Motorcycle Parts &amp; Accessories > Auto Parts > Other Auto Parts" data-cn="汽摩及配件 > 汽车零件 > 其它汽车零件" data-catid="353"><input type="radio">Auto, Motorcycle Parts &amp; Accessories &gt; Auto Parts &gt; Other Auto Parts</li>
+									<li data-valid="1" data-en="Auto, Motorcycle Parts &amp; Accessories > Motorcycle Parts &amp; Accessories > Motorcycle Body Parts" data-cn="汽摩及配件 > 摩托车部件和附件 > 摩托车车体部件" data-catid="415"><input type="radio">Auto, Motorcycle Parts &amp; Accessories &gt; Motorcycle Parts &amp; Accessories &gt; Motorcycle Body Parts</li>
+									<li data-valid="1" data-en="Manufacturing &amp; Processing Machinery > Woodworking Machinery > Woodworking Machinery Parts" data-cn="制造加工机械 > 木工机械 > 木工机械部件" data-catid="2018"><input type="radio">Manufacturing &amp; Processing Machinery &gt; Woodworking Machinery &gt; Woodworking Machinery Parts</li>
+									<li data-valid="1" data-en="Packaging &amp; Printing > Packing Machinery > Packing Machinery Parts" data-cn="包装印刷 > 包装机械 > 包装机械配件" data-catid="2212"><input type="radio">Packaging &amp; Printing &gt; Packing Machinery &gt; Packing Machinery Parts</li>
+									<li data-valid="1" data-en="Packaging &amp; Printing > Printing Machinery > Printing Machinery Parts" data-cn="包装印刷 > 印刷机械 > 印刷机械配件" data-catid="2261"><input type="radio">Packaging &amp; Printing &gt; Printing Machinery &gt; Printing Machinery Parts</li>
+									<li data-valid="1" data-en="Sporting Goods &amp; Recreation > Sporting Goods > Martial Arts &amp; Boxing Supplies" data-cn="运动健身和休闲娱乐 > 体育用品 > 武术格斗用品" data-catid="2442"><input type="radio">Sporting Goods &amp; Recreation &gt; Sporting Goods &gt; Martial Arts &amp; Boxing Supplies</li>
+									<li data-valid="1" data-en="Transportation > Electric Bike &amp; Parts" data-cn="交通运输 > 电动车和部件" data-catid="2659"><input type="radio">Transportation &gt; Electric Bike &amp; Parts</li>
+									<li data-valid="1" data-en="Transportation > Elevator &amp; Funicular Car > Parts for Elevator &amp; Funicular Car" data-cn="交通运输 > 电梯和缆车 > 电梯和缆车配件" data-catid="2666"><input type="radio">Transportation &gt; Elevator &amp; Funicular Car &gt; Parts for Elevator &amp; Funicular Car</li>
+									<li data-valid="1" data-en="Manufacturing &amp; Processing Machinery > Agricultural Machinery > Agricultural Machinery Parts &amp; Tools" data-cn="制造加工机械 > 农业机械 > 农机配件与工具" data-catid="2696"><input type="radio">Manufacturing &amp; Processing Machinery &gt; Agricultural Machinery &gt; Agricultural Machinery Parts &amp; Tools</li>
+									<li data-valid="1" data-en="Auto, Motorcycle Parts &amp; Accessories > Tricycle &amp; Parts" data-cn="汽摩及配件 > 三轮车和部件" data-catid="2699"><input type="radio">Auto, Motorcycle Parts &amp; Accessories &gt; Tricycle &amp; Parts</li>
+									<li data-valid="1" data-en="Industrial Equipment &amp; Components > Gas Generation Equipment &amp; Parts" data-cn="工业设备及组件 > 气体发生设备与配件" data-catid="2700"><input type="radio">Industrial Equipment &amp; Components &gt; Gas Generation Equipment &amp; Parts</li>
+									<li data-valid="1" data-en="Industrial Equipment &amp; Components > Cleaning Machine > Cleaning Machine Parts" data-cn="工业设备及组件 > 清洁设备 > 清洗设备部件" data-catid="2869"><input type="radio">Industrial Equipment &amp; Components &gt; Cleaning Machine &gt; Cleaning Machine Parts</li>
+									<li data-valid="1" data-en="Transportation > Electric Vehicle &amp; Parts > Parts of Electric Bike" data-cn="交通运输 > 电动车和部件 > 电动车部件" data-catid="5096"><input type="radio">Transportation &gt; Electric Vehicle &amp; Parts &gt; Parts of Electric Bike</li>
+									<li data-valid="1" data-en="Transportation > Forklifts &amp; Parts > Forklift Parts" data-cn="交通运输 > 叉车和配件 > 叉车配件" data-catid="5099"><input type="radio">Transportation &gt; Forklifts &amp; Parts &gt; Forklift Parts</li>
+									<li data-valid="1" data-en="Transportation > Marine Parts > Other Marine Parts" data-cn="交通运输 >  造船和海洋部件 > 其他船用配件" data-catid="5109"><input type="radio">Transportation &gt; Marine Parts &gt; Other Marine Parts</li>
+									<li data-valid="1" data-en="Transportation > Train &amp; Railway > Train Parts" data-cn="交通运输 > 火车和铁道 > 火车部件" data-catid="5113"><input type="radio">Transportation &gt; Train &amp; Railway &gt; Train Parts</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="layui-tab-content issuecard_cont">
+							<div class="current_category">
+								您当前选择的目录是：
+								<span id="show_category_path">
+						Auto, Motorcycle Parts & Accessories(汽摩及配件)  >  Auto Parts(汽车零件)  >  Car Tire(轿车轮胎)
+					</span>
+							</div>
+							<input type="hidden" id="current_category_id" class="current_category_id" value="0">
+							<div class="layui-tab-item layui-show">
+								<div>
+									<div class="pro_type layui-clear">
+
+										<div class="layui-row layui-col-space20">
+											<div class="type_1 layui-col-lg-3  layui-col-sm3 layui-col-md3" id="div_catagory0">
+												<ul>
+													<li class="active" data-leaf="0" data-catid="1" data-en="Agriculture &amp; Food" data-cn="农业食品"><span>Agriculture &amp; Food</span></li>
+													<li class="active" data-leaf="0" data-catid="2" data-en="Apparel &amp; Accessories" data-cn="服装饰件"><span>Apparel &amp; Accessories</span></li>
+													<li class="active" data-leaf="0" data-catid="3" data-en="Arts &amp; Crafts" data-cn="工艺品"><span>Arts &amp; Crafts</span></li>
+													<li data-leaf="0" data-catid="4" data-en="Auto, Motorcycle Parts &amp; Accessories" data-cn="汽摩及配件"><span>Auto, Motorcycle Parts &amp; Accessories</span></li>
+													<li data-leaf="0" data-catid="27" data-en="Bags, Cases &amp; Boxes" data-cn="箱包和礼盒"><span>Bags, Cases &amp; Boxes</span></li>
+													<li data-leaf="0" data-catid="5" data-en="Chemicals" data-cn="化工"><span>Chemicals</span></li>
+													<li data-leaf="0" data-catid="6" data-en="Computer Products" data-cn="计算机产品"><span>Computer Products</span></li>
+													<li data-leaf="0" data-catid="7" data-en="Construction &amp; Decoration" data-cn="建筑和装饰材料"><span>Construction &amp; Decoration</span></li>
+													<li data-leaf="0" data-catid="8" data-en="Consumer Electronics" data-cn="消费电子"><span>Consumer Electronics</span></li>
+													<li data-leaf="0" data-catid="9" data-en="Electrical &amp; Electronics" data-cn="电气电子"><span>Electrical &amp; Electronics</span></li>
+													<li data-leaf="0" data-catid="10" data-en="Furniture" data-cn="家具"><span>Furniture</span></li>
+													<li data-leaf="0" data-catid="11" data-en="Health &amp; Medicine" data-cn="医药卫生"><span>Health &amp; Medicine</span></li>
+													<li data-leaf="0" data-catid="12" data-en="Industrial Equipment &amp; Components" data-cn="工业设备及组件"><span>Industrial Equipment &amp; Components</span></li>
+													<li data-leaf="0" data-catid="13" data-en="Instruments &amp; Meters" data-cn="仪器仪表"><span>Instruments &amp; Meters</span></li>
+													<li data-leaf="0" data-catid="14" data-en="Light Industry &amp; Daily Use" data-cn="轻工日用品"><span>Light Industry &amp; Daily Use</span></li>
+													<li data-leaf="0" data-catid="15" data-en="Lights &amp; Lighting" data-cn="照明"><span>Lights &amp; Lighting</span></li>
+													<li data-leaf="0" data-catid="16" data-en="Manufacturing &amp; Processing Machinery" data-cn="制造加工机械"><span>Manufacturing &amp; Processing Machinery</span></li>
+													<li data-leaf="0" data-catid="17" data-en="Metallurgy, Mineral &amp; Energy" data-cn="冶金矿产和能源"><span>Metallurgy, Mineral &amp; Energy</span></li>
+													<li data-leaf="0" data-catid="18" data-en="Office Supplies" data-cn="办公文教"><span>Office Supplies</span></li>
+													<li data-leaf="0" data-catid="19" data-en="Packaging &amp; Printing" data-cn="包装印刷"><span>Packaging &amp; Printing</span></li>
+													<li data-leaf="0" data-catid="20" data-en="Security &amp; Protection" data-cn="安全和防护"><span>Security &amp; Protection</span></li>
+													<li data-leaf="0" data-catid="21" data-en="Service" data-cn="服务"><span>Service</span></li>
+													<li data-leaf="0" data-catid="22" data-en="Sporting Goods &amp; Recreation" data-cn="运动健身和休闲娱乐"><span>Sporting Goods &amp; Recreation</span></li>
+													<li data-leaf="0" data-catid="23" data-en="Textile" data-cn="纺织"><span>Textile</span></li>
+													<li data-leaf="0" data-catid="24" data-en="Tools &amp; Hardware" data-cn="五金工具"><span>Tools &amp; Hardware</span></li>
+													<li data-leaf="0" data-catid="25" data-en="Toys" data-cn="玩具"><span>Toys</span></li>
+													<li data-leaf="0" data-catid="26" data-en="Transportation" data-cn="交通运输"><span>Transportation</span></li>
+												</ul>
+											</div>
+											<div class="type_1 layui-col-lg-3  layui-col-sm3 layui-col-md3" id="div_catagory1">
+												<ul>
+													<li class="active" data-leaf="0" data-catid="1" data-en="Agriculture &amp; Food" data-cn="农业食品"><span>Agriculture &amp; Food</span></li>
+													<li class="active" data-leaf="0" data-catid="2" data-en="Apparel &amp; Accessories" data-cn="服装饰件"><span>Apparel &amp; Accessories</span></li>
+													<li class="active" data-leaf="0" data-catid="3" data-en="Arts &amp; Crafts" data-cn="工艺品"><span>Arts &amp; Crafts</span></li>
+													<li data-leaf="0" data-catid="4" data-en="Auto, Motorcycle Parts &amp; Accessories" data-cn="汽摩及配件"><span>Auto, Motorcycle Parts &amp; Accessories</span></li>
+													<li data-leaf="0" data-catid="27" data-en="Bags, Cases &amp; Boxes" data-cn="箱包和礼盒"><span>Bags, Cases &amp; Boxes</span></li>
+													<li data-leaf="0" data-catid="5" data-en="Chemicals" data-cn="化工"><span>Chemicals</span></li>
+													<li data-leaf="0" data-catid="6" data-en="Computer Products" data-cn="计算机产品"><span>Computer Products</span></li>
+													<li data-leaf="0" data-catid="7" data-en="Construction &amp; Decoration" data-cn="建筑和装饰材料"><span>Construction &amp; Decoration</span></li>
+													<li data-leaf="0" data-catid="8" data-en="Consumer Electronics" data-cn="消费电子"><span>Consumer Electronics</span></li>
+													<li data-leaf="0" data-catid="9" data-en="Electrical &amp; Electronics" data-cn="电气电子"><span>Electrical &amp; Electronics</span></li>
+													<li data-leaf="0" data-catid="10" data-en="Furniture" data-cn="家具"><span>Furniture</span></li>
+													<li data-leaf="0" data-catid="11" data-en="Health &amp; Medicine" data-cn="医药卫生"><span>Health &amp; Medicine</span></li>
+													<li data-leaf="0" data-catid="12" data-en="Industrial Equipment &amp; Components" data-cn="工业设备及组件"><span>Industrial Equipment &amp; Components</span></li>
+													<li data-leaf="0" data-catid="13" data-en="Instruments &amp; Meters" data-cn="仪器仪表"><span>Instruments &amp; Meters</span></li>
+													<li data-leaf="0" data-catid="14" data-en="Light Industry &amp; Daily Use" data-cn="轻工日用品"><span>Light Industry &amp; Daily Use</span></li>
+													<li data-leaf="0" data-catid="15" data-en="Lights &amp; Lighting" data-cn="照明"><span>Lights &amp; Lighting</span></li>
+													<li data-leaf="0" data-catid="16" data-en="Manufacturing &amp; Processing Machinery" data-cn="制造加工机械"><span>Manufacturing &amp; Processing Machinery</span></li>
+													<li data-leaf="0" data-catid="17" data-en="Metallurgy, Mineral &amp; Energy" data-cn="冶金矿产和能源"><span>Metallurgy, Mineral &amp; Energy</span></li>
+													<li data-leaf="0" data-catid="18" data-en="Office Supplies" data-cn="办公文教"><span>Office Supplies</span></li>
+													<li data-leaf="0" data-catid="19" data-en="Packaging &amp; Printing" data-cn="包装印刷"><span>Packaging &amp; Printing</span></li>
+													<li data-leaf="0" data-catid="20" data-en="Security &amp; Protection" data-cn="安全和防护"><span>Security &amp; Protection</span></li>
+													<li data-leaf="0" data-catid="21" data-en="Service" data-cn="服务"><span>Service</span></li>
+													<li data-leaf="0" data-catid="22" data-en="Sporting Goods &amp; Recreation" data-cn="运动健身和休闲娱乐"><span>Sporting Goods &amp; Recreation</span></li>
+													<li data-leaf="0" data-catid="23" data-en="Textile" data-cn="纺织"><span>Textile</span></li>
+													<li data-leaf="0" data-catid="24" data-en="Tools &amp; Hardware" data-cn="五金工具"><span>Tools &amp; Hardware</span></li>
+													<li data-leaf="0" data-catid="25" data-en="Toys" data-cn="玩具"><span>Toys</span></li>
+													<li data-leaf="0" data-catid="26" data-en="Transportation" data-cn="交通运输"><span>Transportation</span></li>
+												</ul>
+											</div>
+											<div class="type_1 layui-col-lg-3  layui-col-sm3 layui-col-md3" id="div_catagory2">
+												<ul>
+													<li class="active" data-leaf="0" data-catid="1" data-en="Agriculture &amp; Food" data-cn="农业食品"><span>Agriculture &amp; Food</span></li>
+													<li class="active" data-leaf="0" data-catid="2" data-en="Apparel &amp; Accessories" data-cn="服装饰件"><span>Apparel &amp; Accessories</span></li>
+													<li class="active" data-leaf="0" data-catid="3" data-en="Arts &amp; Crafts" data-cn="工艺品"><span>Arts &amp; Crafts</span></li>
+													<li data-leaf="0" data-catid="4" data-en="Auto, Motorcycle Parts &amp; Accessories" data-cn="汽摩及配件"><span>Auto, Motorcycle Parts &amp; Accessories</span></li>
+													<li data-leaf="0" data-catid="27" data-en="Bags, Cases &amp; Boxes" data-cn="箱包和礼盒"><span>Bags, Cases &amp; Boxes</span></li>
+													<li data-leaf="0" data-catid="5" data-en="Chemicals" data-cn="化工"><span>Chemicals</span></li>
+													<li data-leaf="0" data-catid="6" data-en="Computer Products" data-cn="计算机产品"><span>Computer Products</span></li>
+													<li data-leaf="0" data-catid="7" data-en="Construction &amp; Decoration" data-cn="建筑和装饰材料"><span>Construction &amp; Decoration</span></li>
+													<li data-leaf="0" data-catid="8" data-en="Consumer Electronics" data-cn="消费电子"><span>Consumer Electronics</span></li>
+													<li data-leaf="0" data-catid="9" data-en="Electrical &amp; Electronics" data-cn="电气电子"><span>Electrical &amp; Electronics</span></li>
+													<li data-leaf="0" data-catid="10" data-en="Furniture" data-cn="家具"><span>Furniture</span></li>
+													<li data-leaf="0" data-catid="11" data-en="Health &amp; Medicine" data-cn="医药卫生"><span>Health &amp; Medicine</span></li>
+													<li data-leaf="0" data-catid="12" data-en="Industrial Equipment &amp; Components" data-cn="工业设备及组件"><span>Industrial Equipment &amp; Components</span></li>
+													<li data-leaf="0" data-catid="13" data-en="Instruments &amp; Meters" data-cn="仪器仪表"><span>Instruments &amp; Meters</span></li>
+													<li data-leaf="0" data-catid="14" data-en="Light Industry &amp; Daily Use" data-cn="轻工日用品"><span>Light Industry &amp; Daily Use</span></li>
+													<li data-leaf="0" data-catid="15" data-en="Lights &amp; Lighting" data-cn="照明"><span>Lights &amp; Lighting</span></li>
+													<li data-leaf="0" data-catid="16" data-en="Manufacturing &amp; Processing Machinery" data-cn="制造加工机械"><span>Manufacturing &amp; Processing Machinery</span></li>
+													<li data-leaf="0" data-catid="17" data-en="Metallurgy, Mineral &amp; Energy" data-cn="冶金矿产和能源"><span>Metallurgy, Mineral &amp; Energy</span></li>
+													<li data-leaf="0" data-catid="18" data-en="Office Supplies" data-cn="办公文教"><span>Office Supplies</span></li>
+													<li data-leaf="0" data-catid="19" data-en="Packaging &amp; Printing" data-cn="包装印刷"><span>Packaging &amp; Printing</span></li>
+													<li data-leaf="0" data-catid="20" data-en="Security &amp; Protection" data-cn="安全和防护"><span>Security &amp; Protection</span></li>
+													<li data-leaf="0" data-catid="21" data-en="Service" data-cn="服务"><span>Service</span></li>
+													<li data-leaf="0" data-catid="22" data-en="Sporting Goods &amp; Recreation" data-cn="运动健身和休闲娱乐"><span>Sporting Goods &amp; Recreation</span></li>
+													<li data-leaf="0" data-catid="23" data-en="Textile" data-cn="纺织"><span>Textile</span></li>
+													<li data-leaf="0" data-catid="24" data-en="Tools &amp; Hardware" data-cn="五金工具"><span>Tools &amp; Hardware</span></li>
+													<li data-leaf="0" data-catid="25" data-en="Toys" data-cn="玩具"><span>Toys</span></li>
+													<li data-leaf="0" data-catid="26" data-en="Transportation" data-cn="交通运输"><span>Transportation</span></li>
+												</ul>
+											</div>
+											<div class="type_1 layui-col-lg-3  layui-col-sm3 layui-col-md3" id="div_catagory3">
+												<ul>
+													<li class="active" data-leaf="0" data-catid="1" data-en="Agriculture &amp; Food" data-cn="农业食品"><span>Agriculture &amp; Food</span></li>
+													<li class="active" data-leaf="0" data-catid="2" data-en="Apparel &amp; Accessories" data-cn="服装饰件"><span>Apparel &amp; Accessories</span></li>
+													<li class="active" data-leaf="0" data-catid="3" data-en="Arts &amp; Crafts" data-cn="工艺品"><span>Arts &amp; Crafts</span></li>
+													<li data-leaf="0" data-catid="4" data-en="Auto, Motorcycle Parts &amp; Accessories" data-cn="汽摩及配件"><span>Auto, Motorcycle Parts &amp; Accessories</span></li>
+													<li data-leaf="0" data-catid="27" data-en="Bags, Cases &amp; Boxes" data-cn="箱包和礼盒"><span>Bags, Cases &amp; Boxes</span></li>
+													<li data-leaf="0" data-catid="5" data-en="Chemicals" data-cn="化工"><span>Chemicals</span></li>
+													<li data-leaf="0" data-catid="6" data-en="Computer Products" data-cn="计算机产品"><span>Computer Products</span></li>
+													<li data-leaf="0" data-catid="7" data-en="Construction &amp; Decoration" data-cn="建筑和装饰材料"><span>Construction &amp; Decoration</span></li>
+													<li data-leaf="0" data-catid="8" data-en="Consumer Electronics" data-cn="消费电子"><span>Consumer Electronics</span></li>
+													<li data-leaf="0" data-catid="9" data-en="Electrical &amp; Electronics" data-cn="电气电子"><span>Electrical &amp; Electronics</span></li>
+													<li data-leaf="0" data-catid="10" data-en="Furniture" data-cn="家具"><span>Furniture</span></li>
+													<li data-leaf="0" data-catid="11" data-en="Health &amp; Medicine" data-cn="医药卫生"><span>Health &amp; Medicine</span></li>
+													<li data-leaf="0" data-catid="12" data-en="Industrial Equipment &amp; Components" data-cn="工业设备及组件"><span>Industrial Equipment &amp; Components</span></li>
+													<li data-leaf="0" data-catid="13" data-en="Instruments &amp; Meters" data-cn="仪器仪表"><span>Instruments &amp; Meters</span></li>
+													<li data-leaf="0" data-catid="14" data-en="Light Industry &amp; Daily Use" data-cn="轻工日用品"><span>Light Industry &amp; Daily Use</span></li>
+													<li data-leaf="0" data-catid="15" data-en="Lights &amp; Lighting" data-cn="照明"><span>Lights &amp; Lighting</span></li>
+													<li data-leaf="0" data-catid="16" data-en="Manufacturing &amp; Processing Machinery" data-cn="制造加工机械"><span>Manufacturing &amp; Processing Machinery</span></li>
+													<li data-leaf="0" data-catid="17" data-en="Metallurgy, Mineral &amp; Energy" data-cn="冶金矿产和能源"><span>Metallurgy, Mineral &amp; Energy</span></li>
+													<li data-leaf="0" data-catid="18" data-en="Office Supplies" data-cn="办公文教"><span>Office Supplies</span></li>
+													<li data-leaf="0" data-catid="19" data-en="Packaging &amp; Printing" data-cn="包装印刷"><span>Packaging &amp; Printing</span></li>
+													<li data-leaf="0" data-catid="20" data-en="Security &amp; Protection" data-cn="安全和防护"><span>Security &amp; Protection</span></li>
+													<li data-leaf="0" data-catid="21" data-en="Service" data-cn="服务"><span>Service</span></li>
+													<li data-leaf="0" data-catid="22" data-en="Sporting Goods &amp; Recreation" data-cn="运动健身和休闲娱乐"><span>Sporting Goods &amp; Recreation</span></li>
+													<li data-leaf="0" data-catid="23" data-en="Textile" data-cn="纺织"><span>Textile</span></li>
+													<li data-leaf="0" data-catid="24" data-en="Tools &amp; Hardware" data-cn="五金工具"><span>Tools &amp; Hardware</span></li>
+													<li data-leaf="0" data-catid="25" data-en="Toys" data-cn="玩具"><span>Toys</span></li>
+													<li data-leaf="0" data-catid="26" data-en="Transportation" data-cn="交通运输"><span>Transportation</span></li>
+												</ul>
+											</div>
+										</div>
+										<!--<div class="wenzi">找不到想要的目录吗？<a href="biaodan.html" style=" color:#F00">点这里</a></div>-->
+									</div>
+									<div>
+										<input type="button" value="下一步" class="next_btn gray">
+									</div>
+								</div>
+							</div>
+							<div class="layui-tab-item">
+								<div class="type_cy">
+									<ul>
+										<li class="current"><input class="list_radio" name="catid" type="radio" data-catid="199"><span data-en="Apparel &amp; Accessories > Wedding Dresses &amp; Ceremonial Clothing > Wedding Dress" data-cn="服装饰件 > 婚纱和礼服 > 婚纱">Apparel &amp; Accessories &gt; Wedding Dresses &amp; Ceremonial Clothing &gt; Wedding Dress</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="3578"><span data-en="Auto, Motorcycle Parts &amp; Accessories > Auto Sensor > Other Auto Sensors" data-cn="汽摩及配件 > 汽车传感器 > 其他汽车传感器">Auto, Motorcycle Parts &amp; Accessories &gt; Auto Sensor &gt; Other Auto Sensors</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="194"><span data-en="Apparel &amp; Accessories > Wedding Dresses &amp; Ceremonial Clothing > Bridesmaid Dress" data-cn="服装饰件 > 婚纱和礼服 > 伴娘装">Apparel &amp; Accessories &gt; Wedding Dresses &amp; Ceremonial Clothing &gt; Bridesmaid Dress</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="113"><span data-en="Apparel &amp; Accessories > Buckle, Hook &amp; Loop" data-cn="服装饰件 > 搭扣">Apparel &amp; Accessories &gt; Buckle, Hook &amp; Loop</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="209"><span data-en="Arts &amp; Crafts > Artificial Crafts" data-cn="工艺品 > 仿生仿真制品">Arts &amp; Crafts &gt; Artificial Crafts</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="2714"><span data-en="Apparel &amp; Accessories > Dresses" data-cn="服装饰件 > 连衣裙、套裙">Apparel &amp; Accessories &gt; Dresses</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="174"><span data-en="Apparel &amp; Accessories > Skirt" data-cn="服装饰件 > 半身裙">Apparel &amp; Accessories &gt; Skirt</span></li>
+										<li><input class="list_radio" name="catid" type="radio" data-catid="2732"><span data-en="Bags, Cases &amp; Boxes > Camera Bag" data-cn="箱包和礼盒 > 相机、摄像机包">Bags, Cases &amp; Boxes &gt; Camera Bag</span></li>
+									</ul>
+								</div>
+								<div>
+									<input type="button" value="下一步" class="next_btn gray">
+								</div>
+							</div>
+							<div class="layui-tab-item">
+								<div class="similar">
+									<div class="similar_top layui-clear">
+										<form action="" class="layui-form">
+											<div class="similar_topl">
+												<div class="layui-form-item">
+													<select name="city" lay-verify="required">
+														<option value=""></option>
+														<option value="0">北京</option>
+														<option value="1">上海</option>
+														<option value="2">广州</option>
+														<option value="3">深圳</option>
+														<option value="4">杭州</option>
+													</select>
+												</div>
+											</div>
+											<div class="similar_topr">
+												<button class="layui-btn layui-btn-normal">
+			     							搜索
+			     						</button>
+												<input type="text" name="title" class="layui-input">
+											</div>
+										</form>
+									</div>
+									<p class="similartit">
+										已发布产品（12）
+									</p>
+									<div class="similarlist">
+										<ul class="layui-clear">
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+											<li>
+												<a href="" class="similarimg">
+													<img src="images/navimg_03.png" alt="" />
+												</a>
+												<div>
+													<a href="" class="similarproname">
+														Test 2Brass Filter Wire big Meshoe rye45tyu9-dude
+													</a>
+												</div>
+												<div>
+													<button class="layui-btn layui-btn-normal">
+				     						发布
+				     					</button>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!--底部版权-->
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				版权所有 © 2009-2017 宁波高新区互联创业电子商务有限公司 Powered by Bossgoo.com
+			</div>
+		</div>
+		</div>
+		<script src="layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pie-1.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			;
+			! function() {
+				//无需再执行layui.use()方法加载模块，直接使用即可
+				var form = layui.form,
+					layer = layui.layer,
+					element = layui.element;;
+
+				element.on('tab(issue)', function(data) {
+					if(data.index == 2) {
+						$('.current_category').hide()
+					} else {
+						$('.current_category').show()
+					}
+				});
+			}();
+		</script>
+
+	</body>
+
+</html>
+<script>
+	$(function() {
+		$(".sel_input2").hover(function() {
+			$(this).find(".li_list").show();
+			$(this).find(".li_list a").click(function() {
+				$(this).parents(".sel_input2").find("input").val($(this).text());
+				$(this).parents(".li_list").hide();
+			});
+		}, function() {
+			$(this).find(".li_list").hide();
+		})
+
+		function switchTab(tabid, tabbox, events, effect, num) {
+			var n = num;
+			$(tabid + ">li").eq(n).attr("class", "current").siblings(":not(.none)").attr("class", "normal");
+			$(tabbox + ">div").eq(n).show().siblings().hide();
+			$(tabid + " li:not(.none)").bind(events, function() {
+				$(this).attr("class", "current").siblings(":not(.none)").attr("class", "normal");
+				$n = $(tabid + ">li").index($(this)[0]);
+				switch(effect) {
+					case "slide":
+						$(tabbox + ">div").eq($n).slideDown().siblings().hide();
+					case "show":
+						$(tabbox + ">div").eq($n).show().siblings().hide();
+					case "fadeIn":
+						$(tabbox + ">div").eq($n).fadeIn().siblings().hide();
+					default:
+						$(tabbox + ">div").eq($n).show().siblings().hide();
+				}
+			})
+		}
+
+	})
+
+	$(window).load(function() {
+		$('.pro_type .type_1 ul').mCustomScrollbar({
+			axis: "y",
+			theme: "dark",
+			advanced: {
+				autoExpandHorizontalScroll: true
+			},
+			mouseWheel: true
+		});
+	});
+</script>
